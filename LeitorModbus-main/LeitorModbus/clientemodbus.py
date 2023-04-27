@@ -27,7 +27,9 @@ class ClienteMODBUS():
     #R	30510	(31..0)	F32	TargetAngle_a1_rad_s1	Target angle in radians
     #R	29500	(31..0)	U32	lastComm_s1	Unix Epoch formated timestamp of the last successful read of this TCU
     #R	30502	(15..0)	U16	Alarms1_s1	Group(16): Alarms1
+    #R	30503	(15..0)	U16	Alarms2_s1	Group(16): Alarms2 (memorized alarms)
     #R	36240	(15..0)	U16	Second_day_31	Local Wind Sensor 1. Peak of day 31. Second
+    #R	30521	(7..0)	U8	StateOfHealth_s1	Battery: State Of Health
     
 
     def atendimento(self):
@@ -75,8 +77,15 @@ class ClienteMODBUS():
                                 Alarme = aio.feeds('alarme-tracker')
                                 alarme = self.decode_uint16(self.read_data(int(5),int(addr[i]), int(n_reg[i])))
                                 aio.send_data(Alarme.key, alarme)
-                                print(name_addr[i]+ ":"+str(alarme))
-
+                                #print(name_addr[i]+ ":"+str(alarme))
+                                j=15
+                                alarm_report = []
+                                while j>-1:
+                                    if((alarme - 2**j) > 0):
+                                        alarm_report.append(j)
+                                        alarme = alarme - 2**j
+                                    j -= 1
+                                print(name_addr[i]+ ":"+str(alarm_report))
                             i+=1
                          
                         i=0
@@ -114,6 +123,7 @@ class ClienteMODBUS():
         epoch = (2**16*decoder[1] + decoder[0] -7200)
         date = datetime.datetime.fromtimestamp(epoch)
         return  date
+    
     
 
 
