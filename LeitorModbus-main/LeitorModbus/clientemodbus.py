@@ -6,9 +6,9 @@ from pymodbus.constants import Endian
 import pyModbusTCP.utils
 import scipy
 import datetime
-#from Adafruit_IO import Client
+from Adafruit_IO import Client
 import math
-#import enviar_web
+import enviar_web
 
 
 
@@ -47,9 +47,9 @@ class ClienteMODBUS():
     def atendimento(self):
 
         self._cliente.open()
-        self.tcu_number_to_read = 86
-        self.addr_default  = [29499,30506,30510,36000,30501,30512]
-        self.name_addr = ('lastcomm','angle_pos','target', 'wind speed', 'state', 'battery')
+        self.tcu_number_to_read = 12
+        self.addr_default  = [30506,30510,29499,36000,30501,30512]
+        self.name_addr = ('angle_pos','target', 'lastcomm', 'wind speed', 'state', 'battery')
         self.n_reg = (2,2,2,1,2,1)
 
 
@@ -57,7 +57,7 @@ class ClienteMODBUS():
         # ADAFRUIT_IO_USERNAME = "Caian_Jesus"
         # ADAFRUIT_IO_KEY = "aio_hrPU04BNGGe6bqelRwPY4ahrMzXe"
         # aio = Client(ADAFRUIT_IO_USERNAME, ADAFRUIT_IO_KEY)
-        #creds = enviar_web.inicializar_web()
+        # creds = enviar_web.inicializar_web()
 
         try:
             atendimento = True
@@ -73,21 +73,22 @@ class ClienteMODBUS():
                             tag_count = 0
                             while tag_count<len(self.addr_default):
                                 try:
-                                    if(tag_count== 0):
-                                        # Date = aio.feeds('com')
-                                        date = self.float_to_date(self.read_data(int(6),int(addr[tag_count]), int(self.n_reg[tag_count])))
-                                        # aio.send_data(Date.key, str(date))
-                                        print(self.name_addr[tag_count]+ ":"+str(date))
-                                    if(tag_count == 1):
+                                    
+                                    if(tag_count == 0):
                                         # Position = aio.feeds('position')
                                         pos = self.rad_to_grau(self.read_data(int(6),int(addr[tag_count]), int(self.n_reg[tag_count])))
                                         # aio.send_data(Position.key, pos)
                                         print(self.name_addr[tag_count]+ ":"+str(pos) +"°")
-                                    if(tag_count == 2):
+                                    if(tag_count == 1):
                                         # Target = aio.feeds('target')
                                         tgt = self.rad_to_grau(self.read_data(int(6),int(addr[tag_count]), int(self.n_reg[tag_count])))
                                         # aio.send_data(Target.key, tgt)
                                         print(self.name_addr[tag_count]+ ":"+str(tgt) +"°")
+                                    if(tag_count== 2):
+                                        # Date = aio.feeds('com')
+                                        date = self.float_to_date(self.read_data(int(6),int(addr[tag_count]), int(self.n_reg[tag_count])))
+                                        # aio.send_data(Date.key, str(date))
+                                        print(self.name_addr[tag_count]+ ":"+str(date))
                                     if(tag_count==3):
                                         # Speed = aio.feeds('speed')
                                         wind = self.decode_uint16(self.read_data(int(6),int(addr[tag_count]), int(self.n_reg[tag_count])))
@@ -116,13 +117,13 @@ class ClienteMODBUS():
                                 except:
                                     tag_count+=1
                                     pass 
-                            tcu_data = [[tcu_number,str(date),pos,tgt,wind,alarme,battery]]
+                            tcu_data = [[tcu_number,pos,tgt,str(date),wind,alarme,battery]]
                             tcu_data_log.extend(tcu_data)
 
                             addr_count = 0
                             while addr_count < len(addr):
-                                if(addr_count == 0):
-                                    addr[0] += 2
+                                if(addr_count == 2):
+                                    addr[2] += 2
                                 elif(addr_count == 3):
                                     pass
                                 else:
@@ -145,7 +146,7 @@ class ClienteMODBUS():
     def read_data(self, tipo, addr, n_reg):
         if tipo == 6:
             result = self._cliente.read_holding_registers(addr+1, n_reg)
-            print(result)
+            #print(result)
             return result
         
     def decode_float32(self,decoder):
@@ -157,6 +158,7 @@ class ClienteMODBUS():
         decoder = BinaryPayloadDecoder.fromRegisters(decoder, Endian.Big)
         decoder = decoder.decode_16bit_uint()
         return decoder
+    
     def decode_uint8(self,decoder):
         decoder = BinaryPayloadDecoder.fromRegisters(decoder, Endian.Big)
         decoder = decoder.decode_8bit_uint()
@@ -170,6 +172,7 @@ class ClienteMODBUS():
         epoch = (2**16*decoder[1] + decoder[0] -7200)
         date = datetime.datetime.fromtimestamp(epoch)
         return date
+    
     def decode_16_to_2_8_int(self,decoder,part):
         decoder_1 = decoder[0] >> 8
         decoder_2 = decoder[0] & 255
