@@ -4,9 +4,9 @@ from pymodbus.payload import BinaryPayloadDecoder
 from pymodbus.payload import BinaryPayloadBuilder
 from pymodbus.constants import Endian
 import pyModbusTCP.utils
-import scipy
+#import scipy
 import datetime
-from Adafruit_IO import Client
+#from Adafruit_IO import Client
 import math
 import enviar_web
 
@@ -17,7 +17,7 @@ class ClienteMODBUS():
     Classe Cliente MODBUS
     """
 
-    def __init__(self, server_ip, porta, scan_time=500):
+    def __init__(self, server_ip, porta, scan_time=120):
         """
         Construtor
         Cria o objeto do cliente modbus
@@ -48,8 +48,8 @@ class ClienteMODBUS():
 
         self._cliente.open()
         self.tcu_number_to_read = 12
-        self.addr_default  = [30506,30510,29499,36000,30501,30512]
-        self.name_addr = ('angle_pos','target', 'lastcomm', 'wind speed', 'state', 'battery')
+        self.addr_default  = [30506,30510,29499,30501,30512]
+        self.name_addr = ('angle_pos','target', 'lastcomm', 'state', 'battery')
         self.n_reg = (2,2,2,1,2,1)
 
 
@@ -57,7 +57,7 @@ class ClienteMODBUS():
         # ADAFRUIT_IO_USERNAME = "Caian_Jesus"
         # ADAFRUIT_IO_KEY = "aio_hrPU04BNGGe6bqelRwPY4ahrMzXe"
         # aio = Client(ADAFRUIT_IO_USERNAME, ADAFRUIT_IO_KEY)
-        # creds = enviar_web.inicializar_web()
+        creds = enviar_web.inicializar_web()
 
         try:
             atendimento = True
@@ -65,11 +65,12 @@ class ClienteMODBUS():
                 
                 while True:
                         tcu_number = 1
-                        tcu_data_log=[]
-                        addr = self.addr_default
+                        
+                        addr = [30506,30510,29499,30501,30512]
                         while tcu_number < self.tcu_number_to_read+1:
+                            tcu_data_log=[]
                             print('TCU' + str(tcu_number))
-                            print(addr)
+                            # print(addr)
                             tag_count = 0
                             while tag_count<len(self.addr_default):
                                 try:
@@ -89,25 +90,19 @@ class ClienteMODBUS():
                                         date = self.float_to_date(self.read_data(int(6),int(addr[tag_count]), int(self.n_reg[tag_count])))
                                         # aio.send_data(Date.key, str(date))
                                         print(self.name_addr[tag_count]+ ":"+str(date))
+                                    # if(tag_count==3):
+                                    #     # Speed = aio.feeds('speed')
+                                    #     wind = self.decode_uint16(self.read_data(int(6),int(addr[tag_count]), int(self.n_reg[tag_count])))
+                                    #     # aio.send_data(Speed.key, wind)
+                                    #     print(self.name_addr[tag_count]+ ":"+str(wind)+"m/s")
                                     if(tag_count==3):
-                                        # Speed = aio.feeds('speed')
-                                        wind = self.decode_uint16(self.read_data(int(6),int(addr[tag_count]), int(self.n_reg[tag_count])))
-                                        # aio.send_data(Speed.key, wind)
-                                        print(self.name_addr[tag_count]+ ":"+str(wind)+"m/s")
-                                    if(tag_count==4):
                                         # Alarme = aio.feeds('alarme-tracker')
                                         alarme = self.decode_uint16(self.read_data(int(6),int(addr[tag_count]), int(self.n_reg[tag_count])))
                                         # aio.send_data(Alarme.key, alarme)
                                         #print(self.name_addr[i]+ ":"+str(alarme))
-                                        alarm_count=15
-                                        alarm_report = []
-                                        while alarm_count>-1:
-                                            if((alarme - 2**alarm_count) > 0):
-                                                alarm_report.append(alarm_count)
-                                                alarme = alarme - 2**alarm_count
-                                            alarm_count -= 1
+                                        alarm_report = self.read_all_bits(alarme)
                                         print(self.name_addr[tag_count]+ ":"+str(alarm_report))
-                                    if(tag_count==5):
+                                    if(tag_count==4):
                                         # Battery = aio.feeds('battery')
                                         battery = self.decode_16_to_2_8_int(self.read_data(int(6),int(addr[tag_count]), int(self.n_reg[tag_count])),2)
                                         # aio.send_data(Battery.key, battery)
@@ -117,25 +112,22 @@ class ClienteMODBUS():
                                 except:
                                     tag_count+=1
                                     pass 
-                            tcu_data = [[tcu_number,pos,tgt,str(date),wind,alarme,battery]]
-                            tcu_data_log.extend(tcu_data)
+
+                            tcu_data_log = [[tcu_number,pos,tgt,str(date),alarme,battery]]
+                            enviar_web.atualizar_dados(creds,tcu_data_log,tcu_number)
 
                             addr_count = 0
                             while addr_count < len(addr):
                                 if(addr_count == 2):
                                     addr[2] += 2
-                                elif(addr_count == 3):
-                                    pass
+                                # elif(addr_count == 3):
+                                #     pass
                                 else:
                                     addr[addr_count] += 22
                                 addr_count +=  1                       
                             tcu_number +=1
-                        print(tcu_data_log)
-                        #enviar_web.atualizar_dados(creds,tcu_data_log)
+
                         tcu_number = 1
-    
-
-
 
                         sleep(self._scan_time)
 
@@ -169,7 +161,7 @@ class ClienteMODBUS():
         return decoder*180/ math.pi
     
     def float_to_date(self,decoder):
-        epoch = (2**16*decoder[1] + decoder[0] -7200)
+        epoch = (2**16*decoder[1] + decoder[0] -3600)
         date = datetime.datetime.fromtimestamp(epoch)
         return date
     
@@ -182,6 +174,23 @@ class ClienteMODBUS():
             return decoder_2
         else:
             print('erro')
+
+    #passa o valor inteiro e o bit que deseja ler e ele retorna o valor do bit
+    def read_bit(self, decoder, bit):
+        decoder_bit = list(format(decoder[0], 'b'))
+        return decoder_bit[15-bit]
+    
+    #passa o valor inteiro e retorna quais os bits que estão ativos
+    def read_all_bits(self,decoder):
+        count=15
+        report = []
+        while count>-1:
+            if((decoder - 2**count) >= 0):
+                report.append(count)
+                decoder = decoder - 2**count
+            count -= 1
+        return report
+
 
 
     
