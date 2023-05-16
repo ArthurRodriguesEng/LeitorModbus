@@ -53,7 +53,8 @@ class ClienteMODBUS():
         #self.name_addr = ('angle_pos','target', 'lastcomm', 'state', 'battery')
         #self.n_reg = (2,2,2,1,2,1)
 
-        modbus_tcu_table =  pd.read_csv('TCU_MODBUS.csv', delimiter=';')
+        modbus_tcu_table =  pd.read_csv('TCU MODBUS SLIN.csv', delimiter=';')
+        modbus_ncu_table =  pd.read_csv('NCU_MODBUS_SLIN.csv', delimiter=';')
         tcu_number_to_read = 12
 
 
@@ -69,80 +70,64 @@ class ClienteMODBUS():
                 while True:
                         tcu_number = 1
                         addr = modbus_tcu_table["address"].tolist()
+                        addr_ncu = modbus_ncu_table["address"].tolist()
+                        ncu_data_read = []
+                        tcu_data_read = []
                         while tcu_number < tcu_number_to_read+1:
                             tcu_data_log=[]
                             print('TCU' + str(tcu_number))
                             # print(addr)
                             tag_count = 0
+                            data_read = []
                             while tag_count<len(addr):
                                 try:
+                                    #print(tag_count)
+                                    decoder = "NAN"
+                                    #print("addr" + str(modbus_tcu_table["address"][tag_count]))
                                     if(int(modbus_tcu_table["n_bit"][tag_count]) == 32):
-                                        print(modbus_tcu_table["n_bit"][tag_count]) 
                                         decoder = self.read_data(int(6),int(modbus_tcu_table["address"][tag_count]), int(2))
-                                        print(decoder)
-                                        if(str(modbus_tcu_table["unit"][tag_count]) == 'rad'):
-                                            pos = self.rad_to_grau(decoder)
-                                            print(str(self.modbus_tcu_table["var_name"][tag_count])+ ":"+str(pos) +"°")
-                                        else:
-                                            print(str(self.modbus_tcu_table["var_name"][tag_count])+ ":"+str(decoder))
+                                        #print(decoder)
+                                        # if(str(modbus_tcu_table["unit"][tag_count]) == 'rad'):
+                                        #     pos = self.rad_to_grau(decoder)
+                                        #     print(str(self.modbus_tcu_table["var_name"][tag_count])+ ":"+str(pos) +"°")
+                                        # else:
+                                        #     print(str(self.modbus_tcu_table["var_name"][tag_count])+ ":"+str(decoder))
                                     if(int(modbus_tcu_table["n_bit"][tag_count]) == 16):
-                                        print(modbus_tcu_table["n_bit"][tag_count]) 
+                                        #print(modbus_tcu_table["n_bit"][tag_count]) 
                                         decoder = self.decode_uint16(self.read_data(int(6),int(modbus_tcu_table["address"][tag_count]), int(1)))
-                                        if(str(modbus_tcu_table["unit"][tag_count]) == 'K'):
-                                            print(str(self.modbus_tcu_table["var_name"][tag_count])+ ":"+str(decoder /10) + str(modbus_tcu_table["unit"][tag_count]))
-                                        else:
-                                            print(str(self.modbus_tcu_table["var_name"][tag_count])+ ":"+str(decoder) + str(modbus_tcu_table["unit"][tag_count]))
+                                        #print(decoder)
+                                        # if(str(modbus_tcu_table["unit"][tag_count]) == 'K'):
+                                        #     print(str(self.modbus_tcu_table["var_name"][tag_count])+ ":"+str(decoder /10) + str(modbus_tcu_table["unit"][tag_count]))
+                                        # else:
+                                        #     print(str(self.modbus_tcu_table["var_name"][tag_count])+ ":"+str(decoder) + str(modbus_tcu_table["unit"][tag_count]))
                                     if(int(modbus_tcu_table["n_bit"][tag_count]) == 8):
-                                        print(modbus_tcu_table["n_bit"][tag_count]) 
+                                        #print(modbus_tcu_table["n_bit"][tag_count]) 
                                         if(int(modbus_tcu_table["start_bit"][tag_count]) == 15):
-                                            self.decode_16_to_2_8_int(self.read_data(int(6),int(modbus_tcu_table["address"][tag_count]), int(1)),1)
-                                            print(str(self.modbus_tcu_table["var_name"][tag_count])+ ":"+str(decoder) + str(modbus_tcu_table["unit"][tag_count]))
-                                        if(int(modbus_tcu_table["start_bit"][tag_count]) == 7):
-                                            self.decode_16_to_2_8_int(self.read_data(int(6),int(modbus_tcu_table["address"][tag_count]), int(1)),2)
-                                            print(str(self.modbus_tcu_table["var_name"][tag_count])+ ":"+str(decoder) + str(modbus_tcu_table["unit"][tag_count]))
+                                            decoder = self.decode_16_to_2_8_int(self.read_data(int(6),int(modbus_tcu_table["address"][tag_count]), int(1)),1)
+                                            #print(decoder)
+                                            #print(str(self.modbus_tcu_table["var_name"][tag_count])+ ":"+str(decoder) + str(modbus_tcu_table["unit"][tag_count]))
+                                        elif(int(modbus_tcu_table["start_bit"][tag_count]) == 7):
+                                            decoder = self.decode_16_to_2_8_int(self.read_data(int(6),int(modbus_tcu_table["address"][tag_count]), int(1)),2)
+                                            #print(decoder)
+                                            #print(str(self.modbus_tcu_table["var_name"][tag_count])+ ":"+str(decoder) + str(modbus_tcu_table["unit"][tag_count]))
+                                        else:
+                                            pass
                                     if(int(modbus_tcu_table["n_bit"][tag_count]) == 1):
-                                        print(modbus_tcu_table["n_bit"][tag_count]) 
+                                        #print(modbus_tcu_table["n_bit"][tag_count]) 
                                         decoder = self.read_bit(self.read_data(int(6),int(modbus_tcu_table["address"][tag_count]), int(1)),modbus_tcu_table["start_bit"][tag_count])
-                                        print(str(self.modbus_tcu_table["var_name"][tag_count])+ ":"+str(decoder) + str(modbus_tcu_table["unit"][tag_count]))
+                                        print(decoder)
+                                        #print(str(self.modbus_tcu_table["var_name"][tag_count])+ ":"+str(decoder) + str(modbus_tcu_table["unit"][tag_count]))
+                                    
+                                    
+                                    data_read.append([modbus_tcu_table["address"][tag_count],modbus_tcu_table["var_name"][tag_count], decoder])    
 
-
-                                    # if(tag_count == ):
-                                    #     # Position = aio.feeds('position')
-                                    #     pos = self.rad_to_grau(self.read_data(int(6),int(addr[tag_count]), int(self.n_reg[tag_count])))
-                                    #     # aio.send_data(Position.key, pos)
-                                    #     print(self.modbus_tcu_table["var_name"][tag_count]+ ":"+str(pos) +"°")
-                                    # if(tag_count == 1):
-                                    #     # Target = aio.feeds('target')
-                                    #     tgt = self.rad_to_grau(self.read_data(int(6),int(addr[tag_count]), int(self.n_reg[tag_count])))
-                                    #     # aio.send_data(Target.key, tgt)
-                                    #     print(self.modbus_tcu_table["var_name"][tag_count]+ ":"+str(tgt) +"°")
-                                    # if(tag_count== 2):
-                                    #     # Date = aio.feeds('com')
-                                    #     date = self.float_to_date(self.read_data(int(6),int(addr[tag_count]), int(self.n_reg[tag_count])))
-                                    #     # aio.send_data(Date.key, str(date))
-                                    #     print(self.modbus_tcu_table["var_name"][tag_count]+ ":"+str(date))
-                                    # # if(tag_count==3):
-                                    # #     # Speed = aio.feeds('speed')
-                                    # #     wind = self.decode_uint16(self.read_data(int(6),int(addr[tag_count]), int(self.n_reg[tag_count])))
-                                    # #     # aio.send_data(Speed.key, wind)
-                                    # #     print(self.modbus_tcu_table["var_name"][tag_count]+ ":"+str(wind)+"m/s")
-                                    # if(tag_count==3):
-                                    #     # Alarme = aio.feeds('alarme-tracker')
-                                    #     alarme = self.decode_uint16(self.read_data(int(6),int(addr[tag_count]), int(self.n_reg[tag_count])))
-                                    #     # aio.send_data(Alarme.key, alarme)
-                                    #     #print(self.name_addr[i]+ ":"+str(alarme))
-                                    #     alarm_report = self.read_all_bits(alarme)
-                                    #     print(self.modbus_tcu_table["var_name"][tag_count]+ ":"+str(alarm_report))
-                                    # if(tag_count==4):
-                                    #     # Battery = aio.feeds('battery')
-                                    #     battery = self.decode_16_to_2_8_int(self.read_data(int(6),int(addr[tag_count]), int(self.n_reg[tag_count])),2)
-                                    #     # aio.send_data(Battery.key, battery)
-                                    #     print(self.modbus_tcu_table["var_name"][tag_count]+ ":"+str(int(battery))+"%")
-                                        
                                     tag_count+=1
                                 except:
                                     tag_count+=1
                                     pass 
+
+                            #print(data_read)
+                            tcu_data_read.append(['TCU' + str(tcu_number), data_read])
 
                             #tcu_data_log = [[tcu_number,pos,tgt,str(date),alarme,battery]]
                             #enviar_web.atualizar_dados(creds,tcu_data_log,tcu_number)
@@ -157,6 +142,7 @@ class ClienteMODBUS():
                             #         addr[addr_count] += 22
                             #     addr_count +=  1                       
                             tcu_number +=1
+                        print(tcu_data_read)
 
                         tcu_number = 1
 
