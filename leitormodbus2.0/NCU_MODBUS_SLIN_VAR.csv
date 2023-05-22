@@ -1,0 +1,16 @@
+address;start_bit;n_bit;type;var_name;Range;unit;Battery
+29380;31;32;U32;lastValidWind_rsu1;;;
+29440;31;32;U32;lastComm_rsu1;;;
+30201;7;8;U8;MSRLow_rsu1;;;
+30201;15;8;U8;MSRHigh_rsu1;;;
+30202;15;16;U16;Alarms1_rsu1;;;
+30203;31;32;F32;WindSpeed_mps_rsu1;;;
+30209;5;2;B;TempLow_rsu1;;;
+36240;15;16;U16;Second_day_31;;;
+36241;15;16;U16;Minute_day_31;;;
+36242;15;16;U16;Hour_day_31;;;
+36243;15;16;U16;Day_day_31;;;
+36244;15;16;U16;Month_day_31;;;
+36245;15;16;U16;Year_day_31;;;
+36246;15;16;U16;WindDirection_day_31;;;
+36247;15;16;U16;WindSpeed_day_31;;;
