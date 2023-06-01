@@ -1,0 +1,392 @@
+{
+    "usina": "Ribeirao_Bonito-SP",
+    "ncu": {
+        "name": "NCU1",
+        "tcus": [
+            {
+                "name": "TCU1",
+                "data": {
+                    "lastComm_s1": "2023-06-01 16:16:12",
+                    "SafePositionState_s1": 0,
+                    "MainState_s1": 2,
+                    "BTActive_a1_s1": 1,
+                    "Alarms1_s1": [],
+                    "Alarms2_s1": [],
+                    "FlagsA_s1": [
+                        15,
+                        6
+                    ],
+                    "PanelVoltage_mV_s1": 23947,
+                    "Position_a1_rad_s1": 0.58984375,
+                    "MotorCurrent_a1_mA_s1": 0,
+                    "MotorCurrentPeak_s1": 1746,
+                    "TargetAngle_a1_rad_s1": 0.5820327997207642,
+                    "PanelCurrent_mA_s1": 26,
+                    "FinishCharge_days_s1": 255,
+                    "StateOfCharge_s1": 100,
+                    "RemainingCapatity_mAh_s1": 0,
+                    "FullCapatity_mAh_s1": 0,
+                    "Voltage_mV_s1": 28117,
+                    "AvgCurrent_mA_s1": 0,
+                    "Current_mA_s1": 0,
+                    "TempPcb_Kx10_s1": 3050,
+                    "TempBat_Kx10_s1": 3050,
+                    "MbAddress_PUB_s1": 1,
+                    "StateOfHealth_s1": 0
+                }
+            },
+            {
+                "name": "TCU2",
+                "data": {
+                    "lastComm_s1": "2023-06-01 16:16:12",
+                    "SafePositionState_s1": 0,
+                    "MainState_s1": 2,
+                    "BTActive_a1_s1": 1,
+                    "Alarms1_s1": [],
+                    "Alarms2_s1": [],
+                    "FlagsA_s1": [
+                        15,
+                        6
+                    ],
+                    "PanelVoltage_mV_s1": 23947,
+                    "Position_a1_rad_s1": 0.5859375,
+                    "MotorCurrent_a1_mA_s1": 0,
+                    "MotorCurrentPeak_s1": 1735,
+                    "TargetAngle_a1_rad_s1": 0.5781263709068298,
+                    "PanelCurrent_mA_s1": 23,
+                    "FinishCharge_days_s1": 255,
+                    "StateOfCharge_s1": 100,
+                    "RemainingCapatity_mAh_s1": 0,
+                    "FullCapatity_mAh_s1": 0,
+                    "Voltage_mV_s1": 28117,
+                    "AvgCurrent_mA_s1": 0,
+                    "Current_mA_s1": 0,
+                    "TempPcb_Kx10_s1": 3050,
+                    "TempBat_Kx10_s1": 3050,
+                    "MbAddress_PUB_s1": 2,
+                    "StateOfHealth_s1": 0
+                }
+            },
+            {
+                "name": "TCU3",
+                "data": {
+                    "lastComm_s1": "2023-06-01 16:16:13",
+                    "SafePositionState_s1": 0,
+                    "MainState_s1": 2,
+                    "BTActive_a1_s1": 1,
+                    "Alarms1_s1": [],
+                    "Alarms2_s1": [],
+                    "FlagsA_s1": [
+                        15,
+                        6
+                    ],
+                    "PanelVoltage_mV_s1": 23913,
+                    "Position_a1_rad_s1": 0.58984375,
+                    "MotorCurrent_a1_mA_s1": 0,
+                    "MotorCurrentPeak_s1": 1628,
+                    "TargetAngle_a1_rad_s1": 0.5781263709068298,
+                    "PanelCurrent_mA_s1": 23,
+                    "FinishCharge_days_s1": 255,
+                    "StateOfCharge_s1": 100,
+                    "RemainingCapatity_mAh_s1": 0,
+                    "FullCapatity_mAh_s1": 0,
+                    "Voltage_mV_s1": 28056,
+                    "AvgCurrent_mA_s1": 0,
+                    "Current_mA_s1": 0,
+                    "TempPcb_Kx10_s1": 3040,
+                    "TempBat_Kx10_s1": 3040,
+                    "MbAddress_PUB_s1": 3,
+                    "StateOfHealth_s1": 0
+                }
+            },
+            {
+                "name": "TCU4",
+                "data": {
+                    "lastComm_s1": "2023-06-01 16:17:47",
+                    "SafePositionState_s1": 0,
+                    "MainState_s1": 2,
+                    "BTActive_a1_s1": 1,
+                    "Alarms1_s1": [],
+                    "Alarms2_s1": [],
+                    "FlagsA_s1": [
+                        15,
+                        6
+                    ],
+                    "PanelVoltage_mV_s1": 24012,
+                    "Position_a1_rad_s1": 0.5859700441360474,
+                    "MotorCurrent_a1_mA_s1": 610,
+                    "MotorCurrentPeak_s1": 1585,
+                    "TargetAngle_a1_rad_s1": 0.5625424385070801,
+                    "PanelCurrent_mA_s1": 712,
+                    "FinishCharge_days_s1": 255,
+                    "StateOfCharge_s1": 100,
+                    "RemainingCapatity_mAh_s1": 0,
+                    "FullCapatity_mAh_s1": 0,
+                    "Voltage_mV_s1": 28086,
+                    "AvgCurrent_mA_s1": 0,
+                    "Current_mA_s1": 0,
+                    "TempPcb_Kx10_s1": 3050,
+                    "TempBat_Kx10_s1": 3050,
+                    "MbAddress_PUB_s1": 4,
+                    "StateOfHealth_s1": 0
+                }
+            },
+            {
+                "name": "TCU5",
+                "data": {
+                    "lastComm_s1": "2023-06-01 16:16:24",
+                    "SafePositionState_s1": 0,
+                    "MainState_s1": 2,
+                    "BTActive_a1_s1": 1,
+                    "Alarms1_s1": [],
+                    "Alarms2_s1": [],
+                    "FlagsA_s1": [
+                        15,
+                        6
+                    ],
+                    "PanelVoltage_mV_s1": 24042,
+                    "Position_a1_rad_s1": 0.5859375,
+                    "MotorCurrent_a1_mA_s1": 0,
+                    "MotorCurrentPeak_s1": 1671,
+                    "TargetAngle_a1_rad_s1": 0.5781265497207642,
+                    "PanelCurrent_mA_s1": 26,
+                    "FinishCharge_days_s1": 255,
+                    "StateOfCharge_s1": 100,
+                    "RemainingCapatity_mAh_s1": 0,
+                    "FullCapatity_mAh_s1": 0,
+                    "Voltage_mV_s1": 28071,
+                    "AvgCurrent_mA_s1": 0,
+                    "Current_mA_s1": 0,
+                    "TempPcb_Kx10_s1": 3050,
+                    "TempBat_Kx10_s1": 3050,
+                    "MbAddress_PUB_s1": 5,
+                    "StateOfHealth_s1": 0
+                }
+            },
+            {
+                "name": "TCU6",
+                "data": {
+                    "lastComm_s1": "2023-06-01 16:18:12",
+                    "SafePositionState_s1": 0,
+                    "MainState_s1": 2,
+                    "BTActive_a1_s1": 1,
+                    "Alarms1_s1": [],
+                    "Alarms2_s1": [],
+                    "FlagsA_s1": [
+                        15,
+                        6
+                    ],
+                    "PanelVoltage_mV_s1": 24012,
+                    "Position_a1_rad_s1": 0.56640625,
+                    "MotorCurrent_a1_mA_s1": 0,
+                    "MotorCurrentPeak_s1": 1671,
+                    "TargetAngle_a1_rad_s1": 0.5585952401161194,
+                    "PanelCurrent_mA_s1": 25,
+                    "FinishCharge_days_s1": 255,
+                    "StateOfCharge_s1": 100,
+                    "RemainingCapatity_mAh_s1": 0,
+                    "FullCapatity_mAh_s1": 0,
+                    "Voltage_mV_s1": 28147,
+                    "AvgCurrent_mA_s1": 0,
+                    "Current_mA_s1": 0,
+                    "TempPcb_Kx10_s1": 3040,
+                    "TempBat_Kx10_s1": 3040,
+                    "MbAddress_PUB_s1": 6,
+                    "StateOfHealth_s1": 0
+                }
+            },
+            {
+                "name": "TCU7",
+                "data": {
+                    "lastComm_s1": "2023-06-01 16:18:29",
+                    "SafePositionState_s1": 0,
+                    "MainState_s1": 2,
+                    "BTActive_a1_s1": 1,
+                    "Alarms1_s1": [],
+                    "Alarms2_s1": [],
+                    "FlagsA_s1": [
+                        15,
+                        6
+                    ],
+                    "PanelVoltage_mV_s1": 23956,
+                    "Position_a1_rad_s1": 0.55078125,
+                    "MotorCurrent_a1_mA_s1": 0,
+                    "MotorCurrentPeak_s1": 2175,
+                    "TargetAngle_a1_rad_s1": 0.5546888709068298,
+                    "PanelCurrent_mA_s1": 23,
+                    "FinishCharge_days_s1": 255,
+                    "StateOfCharge_s1": 100,
+                    "RemainingCapatity_mAh_s1": 0,
+                    "FullCapatity_mAh_s1": 0,
+                    "Voltage_mV_s1": 28162,
+                    "AvgCurrent_mA_s1": 0,
+                    "Current_mA_s1": 0,
+                    "TempPcb_Kx10_s1": 3040,
+                    "TempBat_Kx10_s1": 3040,
+                    "MbAddress_PUB_s1": 7,
+                    "StateOfHealth_s1": 0
+                }
+            },
+            {
+                "name": "TCU8",
+                "data": {
+                    "lastComm_s1": "2023-06-01 16:16:34",
+                    "SafePositionState_s1": 0,
+                    "MainState_s1": 2,
+                    "BTActive_a1_s1": 1,
+                    "Alarms1_s1": [],
+                    "Alarms2_s1": [],
+                    "FlagsA_s1": [
+                        15,
+                        6
+                    ],
+                    "PanelVoltage_mV_s1": 23982,
+                    "Position_a1_rad_s1": 0.4296875,
+                    "MotorCurrent_a1_mA_s1": 0,
+                    "MotorCurrentPeak_s1": 2046,
+                    "TargetAngle_a1_rad_s1": 0.5781263113021851,
+                    "PanelCurrent_mA_s1": 22,
+                    "FinishCharge_days_s1": 255,
+                    "StateOfCharge_s1": 100,
+                    "RemainingCapatity_mAh_s1": 0,
+                    "FullCapatity_mAh_s1": 0,
+                    "Voltage_mV_s1": 28101,
+                    "AvgCurrent_mA_s1": 0,
+                    "Current_mA_s1": 0,
+                    "TempPcb_Kx10_s1": 3040,
+                    "TempBat_Kx10_s1": 3040,
+                    "MbAddress_PUB_s1": 8,
+                    "StateOfHealth_s1": 0
+                }
+            },
+            {
+                "name": "TCU9",
+                "data": {
+                    "lastComm_s1": "2023-06-01 16:18:30",
+                    "SafePositionState_s1": 0,
+                    "MainState_s1": 2,
+                    "BTActive_a1_s1": 1,
+                    "Alarms1_s1": [],
+                    "Alarms2_s1": [],
+                    "FlagsA_s1": [
+                        15,
+                        6
+                    ],
+                    "PanelVoltage_mV_s1": 23947,
+                    "Position_a1_rad_s1": 0.546875,
+                    "MotorCurrent_a1_mA_s1": 0,
+                    "MotorCurrentPeak_s1": 1821,
+                    "TargetAngle_a1_rad_s1": 0.5546888709068298,
+                    "PanelCurrent_mA_s1": 23,
+                    "FinishCharge_days_s1": 255,
+                    "StateOfCharge_s1": 100,
+                    "RemainingCapatity_mAh_s1": 0,
+                    "FullCapatity_mAh_s1": 0,
+                    "Voltage_mV_s1": 28041,
+                    "AvgCurrent_mA_s1": 0,
+                    "Current_mA_s1": 0,
+                    "TempPcb_Kx10_s1": 3060,
+                    "TempBat_Kx10_s1": 3060,
+                    "MbAddress_PUB_s1": 9,
+                    "StateOfHealth_s1": 0
+                }
+            },
+            {
+                "name": "TCU10",
+                "data": {
+                    "lastComm_s1": "2023-06-01 16:18:41",
+                    "SafePositionState_s1": 0,
+                    "MainState_s1": 2,
+                    "BTActive_a1_s1": 1,
+                    "Alarms1_s1": [],
+                    "Alarms2_s1": [],
+                    "FlagsA_s1": [
+                        15,
+                        6
+                    ],
+                    "PanelVoltage_mV_s1": 23827,
+                    "Position_a1_rad_s1": 0.55078125,
+                    "MotorCurrent_a1_mA_s1": 0,
+                    "MotorCurrentPeak_s1": 1692,
+                    "TargetAngle_a1_rad_s1": 0.5507826209068298,
+                    "PanelCurrent_mA_s1": 23,
+                    "FinishCharge_days_s1": 255,
+                    "StateOfCharge_s1": 100,
+                    "RemainingCapatity_mAh_s1": 0,
+                    "FullCapatity_mAh_s1": 0,
+                    "Voltage_mV_s1": 28193,
+                    "AvgCurrent_mA_s1": 0,
+                    "Current_mA_s1": 0,
+                    "TempPcb_Kx10_s1": 3060,
+                    "TempBat_Kx10_s1": 3060,
+                    "MbAddress_PUB_s1": 10,
+                    "StateOfHealth_s1": 0
+                }
+            },
+            {
+                "name": "TCU11",
+                "data": {
+                    "lastComm_s1": "2023-06-01 16:17:11",
+                    "SafePositionState_s1": 0,
+                    "MainState_s1": 2,
+                    "BTActive_a1_s1": 1,
+                    "Alarms1_s1": [],
+                    "Alarms2_s1": [],
+                    "FlagsA_s1": [
+                        15,
+                        6
+                    ],
+                    "PanelVoltage_mV_s1": 24029,
+                    "Position_a1_rad_s1": 0.5078520774841309,
+                    "MotorCurrent_a1_mA_s1": 664,
+                    "MotorCurrentPeak_s1": 1692,
+                    "TargetAngle_a1_rad_s1": 0.5703548192977905,
+                    "PanelCurrent_mA_s1": 710,
+                    "FinishCharge_days_s1": 255,
+                    "StateOfCharge_s1": 100,
+                    "RemainingCapatity_mAh_s1": 0,
+                    "FullCapatity_mAh_s1": 0,
+                    "Voltage_mV_s1": 28132,
+                    "AvgCurrent_mA_s1": 0,
+                    "Current_mA_s1": 0,
+                    "TempPcb_Kx10_s1": 3070,
+                    "TempBat_Kx10_s1": 3070,
+                    "MbAddress_PUB_s1": 11,
+                    "StateOfHealth_s1": 0
+                }
+            },
+            {
+                "name": "TCU12",
+                "data": {
+                    "lastComm_s1": "2023-06-01 16:18:53",
+                    "SafePositionState_s1": 0,
+                    "MainState_s1": 2,
+                    "BTActive_a1_s1": 1,
+                    "Alarms1_s1": [],
+                    "Alarms2_s1": [],
+                    "FlagsA_s1": [
+                        15,
+                        6
+                    ],
+                    "PanelVoltage_mV_s1": 23930,
+                    "Position_a1_rad_s1": 0.5312703847885132,
+                    "MotorCurrent_a1_mA_s1": 342,
+                    "MotorCurrentPeak_s1": 2014,
+                    "TargetAngle_a1_rad_s1": 0.5703387260437012,
+                    "PanelCurrent_mA_s1": 440,
+                    "FinishCharge_days_s1": 255,
+                    "StateOfCharge_s1": 100,
+                    "RemainingCapatity_mAh_s1": 0,
+                    "FullCapatity_mAh_s1": 0,
+                    "Voltage_mV_s1": 28117,
+                    "AvgCurrent_mA_s1": 0,
+                    "Current_mA_s1": 0,
+                    "TempPcb_Kx10_s1": 3030,
+                    "TempBat_Kx10_s1": 3030,
+                    "MbAddress_PUB_s1": 12,
+                    "StateOfHealth_s1": 0
+                }
+            }
+        ]
+    }
+}

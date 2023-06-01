@@ -1,0 +1,7 @@
+﻿equipment;address;start_bit;n_bit;type;var_name;alarm;up_addr
+NCU;36000;15;16;U16;Second_day_1;0;8
+NCU;36001;15;16;U16;Minute_day_1;0;8
+NCU;36002;15;16;U16;Hour_day_1;0;8
+NCU;36003;15;16;U16;Day_day_1;0;8
+NCU;36004;15;16;U16;Month_day_1;0;8
+NCU;36005;15;16;U16;Year_day_1;0;8
