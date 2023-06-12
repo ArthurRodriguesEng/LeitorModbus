@@ -1,0 +1,47 @@
+﻿equipment;address;type;var_name;mult;func
+Inversor;8000;U16;Device type code;1;5
+Inversor;8001;U32;Protocol number;1;5
+Inversor;8003;U32;Communication protocol version;1;5
+Inversor;8005;U16;Total devices connected;1;5
+Inversor;8006;U16;Total faulty devices;1;5
+Inversor;8015;U32;Reserved;1;5
+Inversor;8017;U16;Reserved;1;5
+Inversor;8021;U32;Digital input state;1;5
+Inversor;8023;U32;Reserved;1;5
+Inversor;8025;U32;Reserved;1;5
+Inversor;8027;S16;PT100-1;0.1;5
+Inversor;8028;S16;PT100-2;0.1;5
+Inversor;8029;S16;ADC1 voltage_V;0.01;5
+Inversor;8030;S16;ADC1 current_Ma;0.01;5
+Inversor;8031;S16;ADC2 voltage_V;0.01;5
+Inversor;8032;S16;ADC2 current_Ma;0.01;5
+Inversor;8033;S16;ADC3 voltage_V;0.01;5
+Inversor;8034;S16;ADC4 voltage_V;0.01;5
+Inversor;8035;S16;ADC3 current_Ma;0.01;5
+Inversor;8036;S16;ADC4 current_Ma;0.01;5
+Inversor;8037;S16;Reserved;1;5
+Inversor;8054;S32;Longitude;0.0001;5
+Inversor;8056;S32;Latitude;0.0001;5
+Inversor;8058;U16;Max. total nominal active power_kW;1;5
+Inversor;8059;U16;Min. total nominal active power_kW;1;5
+Inversor;8060;S16;Max. total nominal reactive power_kvar;1;5
+Inversor;8061;U16;Min. total nominal reactive power_kvar;1;5
+Inversor;8066;S16;Inverter preset total active power_kW;1;5
+Inversor;8067;U16;Inverter preset total reactive power_kvar;1;5
+Inversor;8068;U16;Logger On/Off state;1;5
+Inversor;8069;U16;Logger unlatch state;1;5
+Inversor;8070;U64;Total active power_W;1;5
+Inversor;8074;U32;Daily power yield_kWh;0.1;5
+Inversor;8076;S64;Total reactive power_var;1;5
+Inversor;8080;U64;Total power yield_kW;0.1;5
+Inversor;8084;U32;Min. adjustable active power_kvar;0.1;5
+Inversor;8086;U32;Max. adjustable active power_kvar;0.1;5
+Inversor;8088;S32;Min. adjustable reactive power_kvar;0.1;5
+Inversor;8090;S32;Max. adjustable reactive power_kvar;0.1;5
+Inversor;8092;U32;Nominal active power_kvar;0.1;5
+Inversor;8094;U32;Nominal reactive power_kvar;0.1;5
+Inversor;8096;U16;Grid-connected devices;1;5
+Inversor;8097;U16;Off-grid devices;1;5
+Inversor;8098;U64;Monthly yield of array_kWh;0.1;5
+Inversor;8102;U64;Annual yield of array _kWh;0.1;5
+Inversor;8106;U64;Apparent power of array_VA;1;5
