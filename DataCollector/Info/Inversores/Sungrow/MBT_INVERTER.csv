@@ -1,0 +1,7 @@
+﻿equipment;address;start_bit;n_bit;type;var_name;mult;func;up_addr;alarm
+Inversor;5010;15;16;U16;MPPT1_V;1;5;0;0
+Inversor;5011;15;16;U16;MPPT1_A;1;5;0;0
+Inversor;5012;15;16;U16;MPPT2_V;1;5;0;0
+Inversor;5013;15;16;U16;MPPT2_A;1;5;0;0
+Inversor;5014;15;16;U16;MPPT3_V;1;5;0;0
+Inversor;5015;15;16;U16;MPPT3_A;1;5;0;0

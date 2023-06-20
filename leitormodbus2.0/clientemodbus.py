@@ -3,13 +3,11 @@ from time import sleep
 from pymodbus.payload import BinaryPayloadDecoder
 from pymodbus.payload import BinaryPayloadBuilder
 from pymodbus.constants import Endian
-import pyModbusTCP.utils
 import datetime
 import math
 import pandas as pd
 import json
 from threading import Thread
-import time
 from functools import reduce
 
 
