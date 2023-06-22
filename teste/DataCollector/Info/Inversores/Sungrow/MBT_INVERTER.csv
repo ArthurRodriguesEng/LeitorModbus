@@ -1,103 +1,239 @@
-﻿equipment;address;start_bit;n_bit;type;var_name;mult;func;up_addr;alarm;;;;;;;;;;;
-Inversor;4999;15;16;U16;Device type code;1;5;0;0;;;;5000;;;;;;;
-Inversor;5000;15;16;U16;Nominal active power;0.1;5;0;0;;;;5001;;;;;;;
-Inversor;5001;15;16;U16;Output type;;5;0;0;;;;5002;;;;;;;
-Inversor;5002;15;16;U16;Daily power yields;0.1;5;0;0;;;;5003;;;;;;;
-Inversor;5003;31;32;U32;Total power yields;1;5;0;0;;;;5004;;;;;;;
-Inversor;5005;31;32;U32;Total running time;1;5;0;0;;;;5006;;;;;;;
-Inversor;5007;31;32;S16;Internal temperature_°C;0.1;5;0;0;;;;5008;;;;;;;
-Inversor;5008;31;32;U32;Total apparent power;1;5;0;0;;;;5009;;;;;;;
-Inversor;5010;15;16;U16;MPPT 1 voltage;0.1;5;0;0;;;;5011;;;;;;;U16
-Inversor;5011;15;16;U16;MPPT 1 current;0.1;5;0;0;;;;5012;;;;;;;
-Inversor;5012;15;16;U16;MPPT 2 voltage;0.1;5;0;0;;;;5013;;;;;;;
-Inversor;5013;15;16;U16;MPPT 2 current;0.1;5;0;0;;;;5014;;;;;;;
-Inversor;5014;15;16;U16;MPPT 3 voltage;0.1;5;0;0;;;;5015;;;;;;;
-Inversor;5015;15;16;U16;MPPT 3 current;0.1;5;0;0;;;;5016;;;;;;;
-Inversor;5016;31;32;U32;Total DC power;1;5;0;0;;;;5017;;;;;;;
-Inversor;5018;15;16;U16;A-B line voltage/phase A voltage;0.1;5;0;0;;;;5019;;;;;;;
-Inversor;5019;15;16;U16;B-C line Voltage/phase B Voltage;0.1;5;0;0;;;;5020;;;;;;;
-Inversor;5020;15;16;U16;C-A line Voltage/phase C Voltage;0.1;5;0;0;;;;5021;;;;;;;
-Inversor;5021;15;16;U16;Phase A current;0.1;5;0;0;;;;5022;;;;;;;
-Inversor;5022;15;16;U16;Phase B current;0.1;5;0;0;;;;5023;;;;;;;
-Inversor;5023;15;16;U16;Phase C current;0.1;5;0;0;;;;5024;;;;;;;
-Inversor;5030;31;32;U32;Total active power;1;5;0;0;;;;5031;;;;;;;
-Inversor;5032;31;32;S32;Total reactive power;1;5;0;0;;;;5033;;;;;;;
-Inversor;5034;31;32;S16;Power factor;0.001;5;0;0;;;;5035;;;;;;;
-Inversor;5035;15;16;U16;Grid frequency;0.1;5;0;0;;;;5036;;;;;;;
-Inversor;5037;15;16;U16;Work state;1;5;0;0;;;;5038;;;;;;;
-Inversor;5038;15;16;U16;Fault/Alarm time: Year;1;5;0;0;;;;5039;;;;;;;
-Inversor;5039;15;16;U16;Fault/Alarm time: Month;1;5;0;0;;;;5040;;;;;;;
-Inversor;5040;15;16;U16;Fault/Alarm time: Day;1;5;0;0;;;;5041;;;;;;;
-Inversor;5041;15;16;U16;Fault/Alarm time: Hour;1;5;0;0;;;;5042;;;;;;;
-Inversor;5042;15;16;U16;Fault/Alarm time: Minute;1;5;0;0;;;;5043;;;;;;;
-Inversor;5043;15;16;U16;Fault/Alarm time: Second;1;5;0;0;;;;5044;;;;;;;
-Inversor;5044;15;16;U16;Fault/Alarm code 1;1;5;0;0;;;;5045;;;;;;;
-Inversor;5048;15;16;U16;Nominal reactive power;0.1;5;0;0;;;;5049;;;;;;;
-Inversor;5070;15;16;U16;Array insulation resistance;1;5;0;0;;;;5071;;;;;;;
-Inversor;5076;31;32;U32;Active PowerRegulation Setpoint;1;5;0;0;;;;5077;;;;;;;
-Inversor;5078;31;32;S32;Reactive Power Regulation Setpoint;1;5;0;0;;;;5079;;;;;;;
-Inversor;5080;31;32;U32;Work state;1;5;0;0;;;;5081;;;;;;;
-Inversor;5082;31;32;S32;Meter power ;1;5;0;0;;;;5083;;;;;;;
-Inversor;5084;31;32;S32;Meter A phase power;1;5;0;0;;;;5085;;;;;;;
-Inversor;5086;31;32;S32;Meter B phase power;1;5;0;0;;;;5087;;;;;;;
-Inversor;5088;31;32;S32;Meter C phase power;1;5;0;0;;;;5089;;;;;;;
-Inversor;5090;31;32;S32;Load power;1;5;0;0;;;;5091;;;;;;;
-Inversor;5092;31;32;U32;Daily export energy;0.1;5;0;0;;;;5093;;;;;;;
-Inversor;5094;31;32;U32;Total export energy;0.1;5;0;0;;;;5095;;;;;;;
-Inversor;5096;31;32;U32;Daily import energy;0.1;5;0;0;;;;5097;;;;;;;
-Inversor;5098;31;32;U32;Total import energy;0.1;5;0;0;;;;5099;;;;;;;
-Inversor;5100;31;32;U32;Daily direct energy consumption;0.1;5;0;0;;;;5101;;;;;;;
-Inversor;5102;31;32;U32;Total direct energy consumption;0.1;5;0;0;;;;5103;;;;;;;
-Inversor;5112;15;16;U16;Daily running time;1;5;0;0;;;;5113;;;;;;;
-Inversor;5113;15;16;U16;Present country;1;5;0;0;;;;5114;;;;;;;
-Inversor;5114;15;16;U16;MPPT 4 voltage;0.1;5;0;0;;;;5115;;;;;;;
-Inversor;5115;15;16;U16;MPPT 4 current;0.1;5;0;0;;;;5116;;;;;;;
-Inversor;5116;15;16;U16;MPPT 5 voltage;0.1;5;0;0;;;;5117;;;;;;;
-Inversor;5117;15;16;U16;MPPT 5 current;0.1;5;0;0;;;;5118;;;;;;;
-Inversor;5118;15;16;U16;MPPT 6 voltage;0.1;5;0;0;;;;5119;;;;;;;
-Inversor;5119;15;16;U16;MPPT 6 current;0.1;5;0;0;;;;5120;;;;;;;
-Inversor;5120;15;16;U16;MPPT 7 voltage;0.1;5;0;0;;;;5121;;;;;;;
-Inversor;5121;15;16;U16;MPPT 7current;0.1;5;0;0;;;;5122;;;;;;;
-Inversor;5122;15;16;U16;MPPT 8voltage;0.1;5;0;0;;;;5123;;;;;;;
-Inversor;5123;15;16;U16;MPPT 8 current;0.1;5;0;0;;;;5124;;;;;;;
-Inversor;5127;31;32;U32;Monthly power yields;0.1;5;0;0;;;;5128;;;;;;;
-Inversor;5129;15;16;U16;MPPT 9 voltage;0.1;5;0;0;;;;5130;;;;;;;
-Inversor;5130;15;16;U16;MPPT 9 current;0.1;5;0;0;;;;5131;;;;;;;
-Inversor;5131;15;16;U16;MPPT 10 voltage;0.1;5;0;0;;;;5132;;;;;;;
-Inversor;5132;15;16;U16;MPPT 10 current;0.1;5;0;0;;;;5133;;;;;;;
-Inversor;5133;15;16;U16;MPPT 11 voltage;0.1;5;0;0;;;;5134;;;;;;;
-Inversor;5134;15;16;U16;MPPT 11 current;0.1;5;0;0;;;;5135;;;;;;;
-Inversor;5135;15;16;U16;MPPT 12 voltage;0.1;5;0;0;;;;5136;;;;;;;
-Inversor;5136;15;16;U16;MPPT 12 current;0.1;5;0;0;;;;5137;;;;;;;
-Inversor;5139;15;16;U16;Work status1;1;5;0;0;;;;5140;;;;;;;
-Inversor;5140;15;16;U16;Work status2;1;5;0;0;;;;5141;;;;;;;
-Inversor;5143;31;32;U32;Total power yields;0.1;5;0;0;;;;5144;;;;;;;
-Inversor;5145;31;32;S16;Negative voltage to the ground;0.1;5;0;0;;;;5146;;;;;;;
-Inversor;5146;15;16;U16;Bus voltage;0.1;5;0;0;;;;5147;;;;;;;
-Inversor;5147;15;16;U16;Grid frequency;0.01;5;0;0;;;;5148;;;;;;;
-Inversor;5149;15;16;U16;PID work state;1;5;0;0;;;;5150;;;;;;;
-Inversor;5150;15;16;U16;PID alarm code;1;5;0;0;;;;5151;;;;;;;
-Inversor;7012;15;16;U16;String 1 current;0.01;5;0;0;;;;7013;;;;;;;
-Inversor;7013;15;16;U16;String 2 current;0.01;5;0;0;;;;7014;;;;;;;
-Inversor;7014;15;16;U16;String 3 current;0.01;5;0;0;;;;7015;;;;;;;
-Inversor;7015;15;16;U16;String 4 current;0.01;5;0;0;;;;7016;;;;;;;
-Inversor;7016;15;16;U16;String 5 current;0.01;5;0;0;;;;7017;;;;;;;
-Inversor;7017;15;16;U16;String 6 current;0.01;5;0;0;;;;7018;;;;;;;
-Inversor;7018;15;16;U16;String 7 current;0.01;5;0;0;;;;7019;;;;;;;
-Inversor;7019;15;16;U16;String 8 current;0.01;5;0;0;;;;7020;;;;;;;
-Inversor;7020;15;16;U16;String 9 current;0.01;5;0;0;;;;7021;;;;;;;
-Inversor;7021;15;16;U16;String 10 current;0.01;5;0;0;;;;7022;;;;;;;
-Inversor;7022;15;16;U16;String 11 current;0.01;5;0;0;;;;7023;;;;;;;
-Inversor;7023;15;16;U16;String 12 current;0.01;5;0;0;;;;7024;;;;;;;
-Inversor;7024;15;16;U16;String 13 current;0.01;5;0;0;;;;7025;;;;;;;
-Inversor;7025;15;16;U16;String 14 current;0.01;5;0;0;;;;7026;;;;;;;
-Inversor;7026;15;16;U16;String 15 current;0.01;5;0;0;;;;7027;;;;;;;
-Inversor;7027;15;16;U16;String 16 current;0.01;5;0;0;;;;7028;;;;;;;
-Inversor;7028;15;16;U16;String 17 current;0.01;5;0;0;;;;7029;;;;;;;
-Inversor;7029;15;16;U16;String 18 current;0.01;5;0;0;;;;7030;;;;;;;
-Inversor;7030;15;16;U16;String 19 current;0.01;5;0;0;;;;7031;;;;;;;
-Inversor;7031;15;16;U16;String 20 current;0.01;5;0;0;;;;7032;;;;;;;
-Inversor;7032;15;16;U16;String 21 current;0.01;5;0;0;;;;7033;;;;;;;
-Inversor;7033;15;16;U16;String 22 current;0.01;5;0;0;;;;7034;;;;;;;
-Inversor;7034;15;16;U16;String 23 current;0.01;5;0;0;;;;7035;;;;;;;
-Inversor;7035;15;16;U16;String 24 current;0.01;5;0;0;;;;7036;;;;;;;
+﻿equipment;address;start_bit;n_bit;type;var_name;mult;func;up_addr;alarm
+Inversor;4999;15;16;U16;Device type code;1;5;0;0
+Inversor;5000;15;16;U16;Nominal active power;0.1;5;0;0
+Inversor;5001;15;16;U16;Output type;1;5;0;0
+Inversor;5002;15;16;U16;Daily power yields;0.1;5;0;0
+Inversor;5003;31;32;U32;Total power yields;1;5;0;0
+Inversor;5005;31;32;U32;Total running time;1;5;0;0
+Inversor;5007;31;32;S16;Internal temperature_°C;0.1;5;0;0
+Inversor;5008;31;32;U32;Total apparent power;1;5;0;0
+Inversor;5010;15;16;U16;MPPT 1 voltage;0.1;5;0;0
+Inversor;5011;15;16;U16;MPPT 1 current;0.1;5;0;0
+Inversor;5012;15;16;U16;MPPT 2 voltage;0.1;5;0;0
+Inversor;5013;15;16;U16;MPPT 2 current;0.1;5;0;0
+Inversor;5014;15;16;U16;MPPT 3 voltage;0.1;5;0;0
+Inversor;5015;15;16;U16;MPPT 3 current;0.1;5;0;0
+Inversor;5016;31;32;U32;Total DC power;1;5;0;0
+Inversor;5018;15;16;U16;A-B line voltage/phase A voltage;0.1;5;0;0
+Inversor;5019;15;16;U16;B-C line Voltage/phase B Voltage;0.1;5;0;0
+Inversor;5020;15;16;U16;C-A line Voltage/phase C Voltage;0.1;5;0;0
+Inversor;5021;15;16;U16;Phase A current;0.1;5;0;0
+Inversor;5022;15;16;U16;Phase B current;0.1;5;0;0
+Inversor;5023;15;16;U16;Phase C current;0.1;5;0;0
+Inversor;5030;31;32;U32;Total active power;1;5;0;0
+Inversor;5032;31;32;S32;Total reactive power;1;5;0;0
+Inversor;5034;31;32;S16;Power factor;0.001;5;0;0
+Inversor;5035;15;16;U16;Grid frequency;0.1;5;0;0
+Inversor;5037;15;16;U16;Work state;1;5;0;0
+Inversor;5038;15;16;U16;Fault/Alarm time: Year;1;5;0;0
+Inversor;5039;15;16;U16;Fault/Alarm time: Month;1;5;0;0
+Inversor;5040;15;16;U16;Fault/Alarm time: Day;1;5;0;0
+Inversor;5041;15;16;U16;Fault/Alarm time: Hour;1;5;0;0
+Inversor;5042;15;16;U16;Fault/Alarm time: Minute;1;5;0;0
+Inversor;5043;15;16;U16;Fault/Alarm time: Second;1;5;0;0
+Inversor;5044;15;16;U16;Fault/Alarm code 1;1;5;0;0
+Inversor;5048;15;16;U16;Nominal reactive power;0.1;5;0;0
+Inversor;5070;15;16;U16;Array insulation resistance;1;5;0;0
+Inversor;5076;31;32;U32;Active PowerRegulation Setpoint;1;5;0;0
+Inversor;5078;31;32;S32;Reactive Power Regulation Setpoint;1;5;0;0
+Inversor;5080;31;32;U32;Work state;1;5;0;0
+Inversor;5082;31;32;S32;Meter power ;1;5;0;0
+Inversor;5084;31;32;S32;Meter A phase power;1;5;0;0
+Inversor;5086;31;32;S32;Meter B phase power;1;5;0;0
+Inversor;5088;31;32;S32;Meter C phase power;1;5;0;0
+Inversor;5090;31;32;S32;Load power;1;5;0;0
+Inversor;5092;31;32;U32;Daily export energy;0.1;5;0;0
+Inversor;5094;31;32;U32;Total export energy;0.1;5;0;0
+Inversor;5096;31;32;U32;Daily import energy;0.1;5;0;0
+Inversor;5098;31;32;U32;Total import energy;0.1;5;0;0
+Inversor;5100;31;32;U32;Daily direct energy consumption;0.1;5;0;0
+Inversor;5102;31;32;U32;Total direct energy consumption;0.1;5;0;0
+Inversor;5112;15;16;U16;Daily running time;1;5;0;0
+Inversor;5113;15;16;U16;Present country;1;5;0;0
+Inversor;5114;15;16;U16;MPPT 4 voltage;0.1;5;0;0
+Inversor;5115;15;16;U16;MPPT 4 current;0.1;5;0;0
+Inversor;5116;15;16;U16;MPPT 5 voltage;0.1;5;0;0
+Inversor;5117;15;16;U16;MPPT 5 current;0.1;5;0;0
+Inversor;5118;15;16;U16;MPPT 6 voltage;0.1;5;0;0
+Inversor;5119;15;16;U16;MPPT 6 current;0.1;5;0;0
+Inversor;5120;15;16;U16;MPPT 7 voltage;0.1;5;0;0
+Inversor;5121;15;16;U16;MPPT 7current;0.1;5;0;0
+Inversor;5122;15;16;U16;MPPT 8voltage;0.1;5;0;0
+Inversor;5123;15;16;U16;MPPT 8 current;0.1;5;0;0
+Inversor;5127;31;32;U32;Monthly power yields;0.1;5;0;0
+Inversor;5129;15;16;U16;MPPT 9 voltage;0.1;5;0;0
+Inversor;5130;15;16;U16;MPPT 9 current;0.1;5;0;0
+Inversor;5131;15;16;U16;MPPT 10 voltage;0.1;5;0;0
+Inversor;5132;15;16;U16;MPPT 10 current;0.1;5;0;0
+Inversor;5133;15;16;U16;MPPT 11 voltage;0.1;5;0;0
+Inversor;5134;15;16;U16;MPPT 11 current;0.1;5;0;0
+Inversor;5135;15;16;U16;MPPT 12 voltage;0.1;5;0;0
+Inversor;5136;15;16;U16;MPPT 12 current;0.1;5;0;0
+Inversor;5139;15;16;U16;Work status1;1;5;0;0
+Inversor;5140;15;16;U16;Work status2;1;5;0;0
+Inversor;5143;31;32;U32;Total power yields;0.1;5;0;0
+Inversor;5145;31;32;S16;Negative voltage to the ground;0.1;5;0;0
+Inversor;5146;15;16;U16;Bus voltage;0.1;5;0;0
+Inversor;5147;15;16;U16;Grid frequency;0.01;5;0;0
+Inversor;5149;15;16;U16;PID work state;1;5;0;0
+Inversor;5150;15;16;U16;PID alarm code;1;5;0;0
+Inversor;7012;15;16;U16;String 1 current;0.01;5;0;0
+Inversor;7013;15;16;U16;String 2 current;0.01;5;0;0
+Inversor;7014;15;16;U16;String 3 current;0.01;5;0;0
+Inversor;7015;15;16;U16;String 4 current;0.01;5;0;0
+Inversor;7016;15;16;U16;String 5 current;0.01;5;0;0
+Inversor;7017;15;16;U16;String 6 current;0.01;5;0;0
+Inversor;7018;15;16;U16;String 7 current;0.01;5;0;0
+Inversor;7019;15;16;U16;String 8 current;0.01;5;0;0
+Inversor;7020;15;16;U16;String 9 current;0.01;5;0;0
+Inversor;7021;15;16;U16;String 10 current;0.01;5;0;0
+Inversor;7022;15;16;U16;String 11 current;0.01;5;0;0
+Inversor;7023;15;16;U16;String 12 current;0.01;5;0;0
+Inversor;7024;15;16;U16;String 13 current;0.01;5;0;0
+Inversor;7025;15;16;U16;String 14 current;0.01;5;0;0
+Inversor;7026;15;16;U16;String 15 current;0.01;5;0;0
+Inversor;7027;15;16;U16;String 16 current;0.01;5;0;0
+Inversor;7028;15;16;U16;String 17 current;0.01;5;0;0
+Inversor;7029;15;16;U16;String 18 current;0.01;5;0;0
+Inversor;7030;15;16;U16;String 19 current;0.01;5;0;0
+Inversor;7031;15;16;U16;String 20 current;0.01;5;0;0
+Inversor;7032;15;16;U16;String 21 current;0.01;5;0;0
+Inversor;7033;15;16;U16;String 22 current;0.01;5;0;0
+Inversor;7034;15;16;U16;String 23 current;0.01;5;0;0
+Inversor;7035;15;16;U16;String 24 current;0.01;5;0;0
+Inversor;4999;15;16;U16;System clock: Year;1;6;0;0
+Inversor;5000;15;16;U16;System clock: Month;1;6;0;0
+Inversor;5001;15;16;U16;System clock: Day;1;6;0;0
+Inversor;5002;15;16;U16;System clock: Hour;1;6;0;0
+Inversor;5003;15;16;U16;System clock: Minute;1;6;0;0
+Inversor;5004;15;16;U16;System clock: Second;1;6;0;0
+Inversor;5005;15;16;U16;Start/Stop;1;6;0;0
+Inversor;5006;15;16;U16;Power limitation switch;1;6;0;0
+Inversor;5007;15;16;U16;Power limitation setting;0.001;6;0;0
+Inversor;5008;15;16;U16;Reserved;1;6;0;0
+Inversor;5009;15;16;U16;Export power limitation;1;6;0;0
+Inversor;5010;15;16;U16;Export power limitation value;1;6;0;0
+Inversor;5011;15;16;U16;Current transformer output current;1;6;0;0
+Inversor;5012;15;16;U16;Current transformer range;1;6;0;0
+Inversor;5013;15;16;U16;Current transformer;1;6;0;0
+Inversor;5014;15;16;U16;Export power limitation percentage;0.001;6;0;0
+Inversor;5015;15;16;U16;Installed PV Power;0.01;6;0;0
+Inversor;5018;15;16;S16;Power factor setting;0.001;6;0;0
+Inversor;5019;15;16;U16;Active Power Overload;1;6;0;0
+Inversor;5034;15;16;U16;Night SVG Switch;1;6;0;0
+Inversor;5035;15;16;U16;Reactive power adjustment mode;1;6;0;0
+Inversor;5036;15;16;S16;Reactive power percentage setting;0.001;6;0;0
+Inversor;5038;15;16;U16;Power limitation adjustment;0.1;6;0;0
+Inversor;5039;15;16;S16;Reactive power adjustment ;0.1;6;0;0
+Inversor;5040;15;16;U16;PID Recovery;1;6;0;0
+Inversor;5041;15;16;U16;Anti-PID;1;6;0;0
+Inversor;5042;15;16;U16;Full-Day PID;1;6;0;0
+Inversor;5047;15;16;U16;Q(P) curve 1;1;6;0;0
+Inversor;5048;15;16;U16;Q(P) curve 1;1;6;0;0
+Inversor;5049;15;16;U16;Q(P) curve 1;1;6;0;0
+Inversor;5050;15;16;U16;Q(P) curve 1;1;6;0;0
+Inversor;5051;15;16;U16;Q(P) curve 1;1;6;0;0
+Inversor;5052;15;16;U16;Q(P) curve 1;1;6;0;0
+Inversor;5053;15;16;U16;Q(P) curve 1_1;1;6;0;0
+Inversor;5054;15;16;U16;Q(P) curve 1_2;1;6;0;0
+Inversor;5055;15;16;U16;Q(P) curve 1_3;1;6;0;0
+Inversor;5056;15;16;U16;Q(P) curve 1_4;1;6;0;0
+Inversor;5057;15;16;U16;Q(P) curve 1_5;1;6;0;0
+Inversor;5058;15;16;U16;Q(P) curve 1_6;1;6;0;0
+Inversor;5059;15;16;U16;Q(P) curve 1_7;1;6;0;0
+Inversor;5060;15;16;U16;Q(P) curve 1_8;1;6;0;0
+Inversor;5061;15;16;U16;Q(P) curve 1_9;1;6;0;0
+Inversor;5062;15;16;U16;Q(P) curve 1_10;1;6;0;0
+Inversor;5063;15;16;U16;Q(P) curve 1_11;1;6;0;0
+Inversor;5064;15;16;U16;Q(P) curve 1_12;1;6;0;0
+Inversor;5065;15;16;U16;Q(P) curve 1_13;1;6;0;0
+Inversor;5066;15;16;U16;Q(P) curve 1_14;1;6;0;0
+Inversor;5067;15;16;U16;Q(P) curve 1_15;1;6;0;0
+Inversor;5068;15;16;U16;Q(P) curve 1_16;1;6;0;0
+Inversor;5069;15;16;U16;Q(P) curve 1_17;1;6;0;0
+Inversor;5070;15;16;U16;Q(P) curve 1_18;1;6;0;0
+Inversor;5071;15;16;U16;Q(P) curve 1_19;1;6;0;0
+Inversor;5072;15;16;U16;Q(P) curve 1_20;1;6;0;0
+Inversor;5073;15;16;U16;Q(P) curve 1_21;1;6;0;0
+Inversor;5074;15;16;U16;Q(P) curve 1_22;1;6;0;0
+Inversor;5075;15;16;U16;Q(P) curve 1_23;1;6;0;0
+Inversor;5076;15;16;U16;Q(P) curve 1_24;1;6;0;0
+Inversor;5077;15;16;U16;Q(U) curve 1_1;1;6;0;0
+Inversor;5078;15;16;U16;Q(U) curve 1_2;1;6;0;0
+Inversor;5079;15;16;U16;Q(U) curve 1_3;1;6;0;0
+Inversor;5080;15;16;U16;Q(U) curve 1_4;1;6;0;0
+Inversor;5081;15;16;U16;Q(U) curve 1_5;1;6;0;0
+Inversor;5082;15;16;U16;Q(U) curve 1_6;1;6;0;0
+Inversor;5083;15;16;U16;Q(U) curve 1_7;1;6;0;0
+Inversor;5084;15;16;U16;Q(U) curve 1_8;1;6;0;0
+Inversor;5085;15;16;U16;Q(U) curve 1_9;1;6;0;0
+Inversor;5086;15;16;U16;Q(U) curve 1_10;1;6;0;0
+Inversor;5087;15;16;U16;Q(U) curve 1_11;1;6;0;0
+Inversor;5088;15;16;U16;Q(U) curve 1_12;1;6;0;0
+Inversor;5089;15;16;U16;Q(U) curve 1_13;1;6;0;0
+Inversor;5090;15;16;U16;Q(U) curve 1_14;1;6;0;0
+Inversor;5091;15;16;U16;Q(U) curve 1_15;1;6;0;0
+Inversor;5092;15;16;U16;Q(U) curve 1_16;1;6;0;0
+Inversor;5093;15;16;U16;Q(U) curve 1_17;1;6;0;0
+Inversor;5094;15;16;U16;Q(U) curve 1_18;1;6;0;0
+Inversor;5095;15;16;U16;Q(U) curve 1_19;1;6;0;0
+Inversor;5096;15;16;U16;Q(U) curve 1_20;1;6;0;0
+Inversor;5097;15;16;U16;Q(U) curve 1_21;1;6;0;0
+Inversor;5098;15;16;U16;Q(U) curve 1_22;1;6;0;0
+Inversor;5099;15;16;U16;Q(U) curve 1_23;1;6;0;0
+Inversor;5100;15;16;U16;Q(U) curve 1_24;1;6;0;0
+Inversor;5101;15;16;U16;Q(U) curve 1_25;1;6;0;0
+Inversor;5102;15;16;U16;Q(U) curve 1_26;1;6;0;0
+Inversor;5103;15;16;U16;Q(U) curve 1_27;1;6;0;0
+Inversor;5104;15;16;U16;Q(U) curve 1_28;1;6;0;0
+Inversor;5105;15;16;U16;Q(U) curve 1_29;1;6;0;0
+Inversor;5106;15;16;U16;Q(U) curve 1_30;1;6;0;0
+Inversor;5107;15;16;U16;Q(U) curve 1_31;1;6;0;0
+Inversor;5108;15;16;U16;Q(U) curve 1_32;1;6;0;0
+Inversor;5109;15;16;U16;Q(U) curve 1_33;1;6;0;0
+Inversor;5110;15;16;U16;Q(U) curve 1_34;1;6;0;0
+Inversor;5111;15;16;U16;Q(U) curve 1_35;1;6;0;0
+Inversor;5112;15;16;U16;Q(U) curve 1_36;1;6;0;0
+Inversor;5113;15;16;U16;Q(U) curve 1_37;1;6;0;0
+Inversor;5114;15;16;U16;Q(U) curve 1_38;1;6;0;0
+Inversor;5115;15;16;U16;Q(P) curve 2_1;1;6;0;0
+Inversor;5116;15;16;U16;Q(P) curve 2_2;1;6;0;0
+Inversor;5117;15;16;U16;Q(P) curve 2_3;1;6;0;0
+Inversor;5118;15;16;U16;Q(P) curve 2_4;1;6;0;0
+Inversor;5119;15;16;U16;Q(P) curve 2_5;1;6;0;0
+Inversor;5120;15;16;U16;Q(P) curve 2_6;1;6;0;0
+Inversor;5121;15;16;U16;Q(P) curve 2_7;1;6;0;0
+Inversor;5122;15;16;U16;Q(P) curve 2_8;1;6;0;0
+Inversor;5123;15;16;U16;Q(P) curve 2_9;1;6;0;0
+Inversor;5124;15;16;U16;Q(P) curve 2_10;1;6;0;0
+Inversor;5125;15;16;U16;Q(P) curve 2_11;1;6;0;0
+Inversor;5126;15;16;U16;Q(P) curve 2_12;1;6;0;0
+Inversor;5127;15;16;U16;Q(P) curve 2_13;1;6;0;0
+Inversor;5128;15;16;U16;Q(P) curve 2_14;1;6;0;0
+Inversor;5129;15;16;U16;Q(P) curve 2_15;1;6;0;0
+Inversor;5130;15;16;U16;Q(P) curve 2_16;1;6;0;0
+Inversor;5131;15;16;U16;Q(P) curve 2_17;1;6;0;0
+Inversor;5132;15;16;U16;Q(P) curve 2_18;1;6;0;0
+Inversor;5133;15;16;U16;Q(P) curve 2_19;1;6;0;0
+Inversor;5134;15;16;U16;Q(U) curve 2_1;1;6;0;0
+Inversor;5135;15;16;U16;Q(U) curve 2_2;1;6;0;0
+Inversor;5136;15;16;U16;Q(U) curve 2_3;1;6;0;0
+Inversor;5137;15;16;U16;Q(U) curve 2_4;1;6;0;0
+Inversor;5138;15;16;U16;Q(U) curve 2_5;1;6;0;0
+Inversor;5139;15;16;U16;Q(U) curve 2_6;1;6;0;0
+Inversor;5140;15;16;U16;Q(U) curve 2_7;1;6;0;0
+Inversor;5141;15;16;U16;Q(U) curve 2_8;1;6;0;0
+Inversor;5142;15;16;U16;Q(U) curve 2_9;1;6;0;0
+Inversor;5143;15;16;U16;Q(U) curve 2_10;1;6;0;0
+Inversor;5144;15;16;U16;Q(U) curve 2_11;1;6;0;0
+Inversor;5145;15;16;U16;Q(U) curve 2_12;1;6;0;0
+Inversor;5146;15;16;U16;Q(U) curve 2_13;1;6;0;0
+Inversor;5147;15;16;U16;Q(U) curve 2_14;1;6;0;0
+Inversor;5148;15;16;U16;Q(U) curve 2_15;1;6;0;0
+Inversor;5149;15;16;U16;Q(U) curve 2_16;1;6;0;0
+Inversor;5150;15;16;U16;Q(U) curve 2_17;1;6;0;0
+Inversor;5151;15;16;U16;Q(U) curve 2_18;1;6;0;0
+Inversor;5152;15;16;U16;Q(U) curve 2_19;1;6;0;0
+Inversor;5153;15;16;U16;Q(U) curve 2_20;1;6;0;0
+Inversor;32568;15;16;U16;Quick grid dispatch mode;1;6;0;0
+Inversor;32569;15;16;U16;Swift grid dispatch mode;1;6;0;0
