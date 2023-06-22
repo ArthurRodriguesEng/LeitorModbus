@@ -1,3 +1,0 @@
-equipment;address;start_bit;n_bit;type;var_name;alarm;up_addr;func;n_reg;alarm
-WIND;30203;31;32;F32;WindSpeed_mps_rsu1;0;0;6;2;0
-WIND;30104;31;32;D32;NcuDatetime;0;0;6;2;0

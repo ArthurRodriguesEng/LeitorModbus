@@ -1,0 +1,338 @@
+[
+    {
+        "Device type code": 315
+    },
+    {
+        "Nominal active power": 1250
+    },
+    {
+        "Output type": 2
+    },
+    {
+        "Daily power yields": 6426
+    },
+    {
+        "Total power yields": "2318073856"
+    },
+    {
+        "Total running time": "39780352"
+    },
+    {
+        "Internal temperature_\u00b0C": [
+            10448,
+            0
+        ]
+    },
+    {
+        "Total apparent power": "684720128"
+    },
+    {
+        "MPPT 1 voltage": 10800
+    },
+    {
+        "MPPT 1 current": 98
+    },
+    {
+        "MPPT 2 voltage": 0
+    },
+    {
+        "MPPT 2 current": 0
+    },
+    {
+        "MPPT 3 voltage": 0
+    },
+    {
+        "MPPT 3 current": 0
+    },
+    {
+        "Total DC power": "695140352"
+    },
+    {
+        "A-B line voltage/phase A voltage": 6219
+    },
+    {
+        "B-C line Voltage/phase B Voltage": 6211
+    },
+    {
+        "C-A line Voltage/phase C Voltage": 6236
+    },
+    {
+        "Phase A current": 100
+    },
+    {
+        "Phase B current": 101
+    },
+    {
+        "Phase C current": 100
+    },
+    {
+        "Total active power": "684720128"
+    },
+    {
+        "Total reactive power": [
+            0,
+            1000
+        ]
+    },
+    {
+        "Power factor": [
+            599,
+            0
+        ]
+    },
+    {
+        "Grid frequency": 599
+    },
+    {
+        "Work state": 0
+    },
+    {
+        "Fault/Alarm time: Year": 0
+    },
+    {
+        "Fault/Alarm time: Month": 0
+    },
+    {
+        "Fault/Alarm time: Day": 0
+    },
+    {
+        "Fault/Alarm time: Hour": 0
+    },
+    {
+        "Fault/Alarm time: Minute": 0
+    },
+    {
+        "Fault/Alarm time: Second": 0
+    },
+    {
+        "Fault/Alarm code 1": 0
+    },
+    {
+        "Nominal reactive power": 750
+    },
+    {
+        "Array insulation resistance": 3172
+    },
+    {
+        "Active PowerRegulation Setpoint": "3897032705"
+    },
+    {
+        "Reactive Power Regulation Setpoint": [
+            0,
+            1
+        ]
+    },
+    {
+        "Work state": "65538"
+    },
+    {
+        "Meter power ": [
+            0,
+            0
+        ]
+    },
+    {
+        "Meter A phase power": [
+            0,
+            0
+        ]
+    },
+    {
+        "Meter B phase power": [
+            0,
+            0
+        ]
+    },
+    {
+        "Meter C phase power": [
+            0,
+            0
+        ]
+    },
+    {
+        "Load power": [
+            0,
+            0
+        ]
+    },
+    {
+        "Daily export energy": "0"
+    },
+    {
+        "Total export energy": "0"
+    },
+    {
+        "Daily import energy": "0"
+    },
+    {
+        "Total import energy": "0"
+    },
+    {
+        "Daily direct energy consumption": "0"
+    },
+    {
+        "Total direct energy consumption": "0"
+    },
+    {
+        "Daily running time": 617
+    },
+    {
+        "Present country": 66
+    },
+    {
+        "MPPT 4 voltage": 0
+    },
+    {
+        "MPPT 4 current": 0
+    },
+    {
+        "MPPT 5 voltage": 0
+    },
+    {
+        "MPPT 5 current": 0
+    },
+    {
+        "MPPT 6 voltage": 0
+    },
+    {
+        "MPPT 6 current": 0
+    },
+    {
+        "MPPT 7 voltage": 0
+    },
+    {
+        "MPPT 7current": 0
+    },
+    {
+        "MPPT 8voltage": 0
+    },
+    {
+        "MPPT 8 current": 0
+    },
+    {
+        "Monthly power yields": "3807772673"
+    },
+    {
+        "MPPT 9 voltage": 0
+    },
+    {
+        "MPPT 9 current": 0
+    },
+    {
+        "MPPT 10 voltage": 0
+    },
+    {
+        "MPPT 10 current": 0
+    },
+    {
+        "MPPT 11 voltage": 0
+    },
+    {
+        "MPPT 11 current": 0
+    },
+    {
+        "MPPT 12 voltage": 0
+    },
+    {
+        "MPPT 12 current": 0
+    },
+    {
+        "Work status1": 1
+    },
+    {
+        "Work status2": 1
+    },
+    {
+        "Total power yields": "1706229765"
+    },
+    {
+        "Negative voltage to the ground": [
+            10800,
+            5999
+        ]
+    },
+    {
+        "Bus voltage": 10800
+    },
+    {
+        "Grid frequency": 5999
+    },
+    {
+        "PID work state": 0
+    },
+    {
+        "PID alarm code": 0
+    },
+    {
+        "String 1 current": 0
+    },
+    {
+        "String 2 current": 0
+    },
+    {
+        "String 3 current": 0
+    },
+    {
+        "String 4 current": 0
+    },
+    {
+        "String 5 current": 0
+    },
+    {
+        "String 6 current": 0
+    },
+    {
+        "String 7 current": 0
+    },
+    {
+        "String 8 current": 0
+    },
+    {
+        "String 9 current": 0
+    },
+    {
+        "String 10 current": 0
+    },
+    {
+        "String 11 current": 0
+    },
+    {
+        "String 12 current": 0
+    },
+    {
+        "String 13 current": 0
+    },
+    {
+        "String 14 current": 0
+    },
+    {
+        "String 15 current": 0
+    },
+    {
+        "String 16 current": 0
+    },
+    {
+        "String 17 current": 0
+    },
+    {
+        "String 18 current": 0
+    },
+    {
+        "String 19 current": 0
+    },
+    {
+        "String 20 current": 0
+    },
+    {
+        "String 21 current": 0
+    },
+    {
+        "String 22 current": 0
+    },
+    {
+        "String 23 current": 0
+    },
+    {
+        "String 24 current": 0
+    }
+]
