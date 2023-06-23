@@ -1,0 +1,688 @@
+[
+    [
+        {
+            "Device type code": 315.0
+        },
+        {
+            "Nominal active power": 125.0
+        },
+        {
+            "Output type": 2.0
+        },
+        {
+            "Daily power yields": 772.0
+        },
+        {
+            "Total power yields": 2414411776.0
+        },
+        {
+            "Total running time": 41156608.0
+        },
+        {
+            "Total apparent power": 2545221632.0
+        },
+        {
+            "MPPT 1 voltage": 1106.2
+        },
+        {
+            "MPPT 1 current": 35.7
+        },
+        {
+            "MPPT 2 voltage": 0.0
+        },
+        {
+            "MPPT 2 current": 0.0
+        },
+        {
+            "MPPT 3 voltage": 0.0
+        },
+        {
+            "MPPT 3 current": 0.0
+        },
+        {
+            "Total DC power": 2600206336.0
+        },
+        {
+            "A-B line voltage/phase A voltage": 618.3000000000001
+        },
+        {
+            "B-C line Voltage/phase B Voltage": 616.6
+        },
+        {
+            "C-A line Voltage/phase C Voltage": 619.2
+        },
+        {
+            "Phase A current": 36.4
+        },
+        {
+            "Phase B current": 36.5
+        },
+        {
+            "Phase C current": 36.300000000000004
+        },
+        {
+            "Total active power": 2545221632.0
+        },
+        {
+            "Grid frequency": 59.900000000000006
+        },
+        {
+            "Work state": 0.0
+        },
+        {
+            "Fault/Alarm time: Year": 0.0
+        },
+        {
+            "Fault/Alarm time: Month": 0.0
+        },
+        {
+            "Fault/Alarm time: Day": 0.0
+        },
+        {
+            "Fault/Alarm time: Hour": 0.0
+        },
+        {
+            "Fault/Alarm time: Minute": 0.0
+        },
+        {
+            "Fault/Alarm time: Second": 0.0
+        },
+        {
+            "Fault/Alarm code 1": 0.0
+        },
+        {
+            "Nominal reactive power": 75.0
+        },
+        {
+            "Array insulation resistance": 2793.0
+        },
+        {
+            "Active PowerRegulation Setpoint": 3897032705.0
+        },
+        {
+            "Work state": 65538.0
+        },
+        {
+            "Daily export energy": 0.0
+        },
+        {
+            "Total export energy": 0.0
+        },
+        {
+            "Daily import energy": 0.0
+        },
+        {
+            "Total import energy": 0.0
+        },
+        {
+            "Daily direct energy consumption": 0.0
+        },
+        {
+            "Total direct energy consumption": 0.0
+        },
+        {
+            "Daily running time": 539.0
+        },
+        {
+            "Present country": 66.0
+        },
+        {
+            "MPPT 4 voltage": 0.0
+        },
+        {
+            "MPPT 4 current": 0.0
+        },
+        {
+            "MPPT 5 voltage": 0.0
+        },
+        {
+            "MPPT 5 current": 0.0
+        },
+        {
+            "MPPT 6 voltage": 0.0
+        },
+        {
+            "MPPT 6 current": 0.0
+        },
+        {
+            "MPPT 7 voltage": 0.0
+        },
+        {
+            "MPPT 7current": 0.0
+        },
+        {
+            "MPPT 8voltage": 0.0
+        },
+        {
+            "MPPT 8 current": 0.0
+        },
+        {
+            "Monthly power yields": 47625011.400000006
+        },
+        {
+            "MPPT 9 voltage": 0.0
+        },
+        {
+            "MPPT 9 current": 0.0
+        },
+        {
+            "MPPT 10 voltage": 0.0
+        },
+        {
+            "MPPT 10 current": 0.0
+        },
+        {
+            "MPPT 11 voltage": 0.0
+        },
+        {
+            "MPPT 11 current": 0.0
+        },
+        {
+            "MPPT 12 voltage": 0.0
+        },
+        {
+            "MPPT 12 current": 0.0
+        },
+        {
+            "Work status1": 1.0
+        },
+        {
+            "Work status2": 1.0
+        },
+        {
+            "Total power yields": 266967450.10000002
+        },
+        {
+            "Bus voltage": 1106.2
+        },
+        {
+            "Grid frequency": 59.980000000000004
+        },
+        {
+            "PID work state": 0.0
+        },
+        {
+            "PID alarm code": 0.0
+        },
+        {
+            "String 1 current": 0.0
+        },
+        {
+            "String 2 current": 0.0
+        },
+        {
+            "String 3 current": 0.0
+        },
+        {
+            "String 4 current": 0.0
+        },
+        {
+            "String 5 current": 0.0
+        },
+        {
+            "String 6 current": 0.0
+        },
+        {
+            "String 7 current": 0.0
+        },
+        {
+            "String 8 current": 0.0
+        },
+        {
+            "String 9 current": 0.0
+        },
+        {
+            "String 10 current": 0.0
+        },
+        {
+            "String 11 current": 0.0
+        },
+        {
+            "String 12 current": 0.0
+        },
+        {
+            "String 13 current": 0.0
+        },
+        {
+            "String 14 current": 0.0
+        },
+        {
+            "String 15 current": 0.0
+        },
+        {
+            "String 16 current": 0.0
+        },
+        {
+            "String 17 current": 0.0
+        },
+        {
+            "String 18 current": 0.0
+        },
+        {
+            "String 19 current": 0.0
+        },
+        {
+            "String 20 current": 0.0
+        },
+        {
+            "String 21 current": 0.0
+        },
+        {
+            "String 22 current": 0.0
+        },
+        {
+            "String 23 current": 0.0
+        },
+        {
+            "String 24 current": 0.0
+        },
+        {
+            "System clock: Year": 2023.0
+        },
+        {
+            "System clock: Month": 6.0
+        },
+        {
+            "System clock: Day": 23.0
+        },
+        {
+            "System clock: Hour": 15.0
+        },
+        {
+            "System clock: Minute": 48.0
+        },
+        {
+            "System clock: Second": 26.0
+        },
+        {
+            "Start/Stop": 207.0
+        },
+        {
+            "Power limitation switch": 170.0
+        },
+        {
+            "Power limitation setting": 1.0
+        },
+        {
+            "Reserved": 65535.0
+        },
+        {
+            "Export power limitation": 65535.0
+        },
+        {
+            "Export power limitation value": 65535.0
+        },
+        {
+            "Current transformer output current": 65535.0
+        },
+        {
+            "Current transformer range": 65535.0
+        },
+        {
+            "Current transformer": 65535.0
+        },
+        {
+            "Export power limitation percentage": 65.535
+        },
+        {
+            "Installed PV Power": 655.35
+        },
+        {
+            "Power factor setting": -0.001
+        },
+        {
+            "Active Power Overload": 65535.0
+        },
+        {
+            "Night SVG Switch": 65535.0
+        },
+        {
+            "Reactive power adjustment mode": 85.0
+        },
+        {
+            "Reactive power percentage setting": -0.001
+        },
+        {
+            "Power limitation adjustment": 125.0
+        },
+        {
+            "Reactive power adjustment ": -0.1
+        },
+        {
+            "PID Recovery": 85.0
+        },
+        {
+            "Anti-PID": 85.0
+        },
+        {
+            "Full-Day PID": 65535.0
+        },
+        {
+            "Q(P) curve 1": 65535.0
+        },
+        {
+            "Q(P) curve 1": 65535.0
+        },
+        {
+            "Q(P) curve 1": 32767.0
+        },
+        {
+            "Q(P) curve 1": 65535.0
+        },
+        {
+            "Q(P) curve 1": 65535.0
+        },
+        {
+            "Q(P) curve 1": 65535.0
+        },
+        {
+            "Q(P) curve 1_1": 65535.0
+        },
+        {
+            "Q(P) curve 1_2": 65535.0
+        },
+        {
+            "Q(P) curve 1_3": 32767.0
+        },
+        {
+            "Q(P) curve 1_4": 65535.0
+        },
+        {
+            "Q(P) curve 1_5": 65535.0
+        },
+        {
+            "Q(P) curve 1_6": 65535.0
+        },
+        {
+            "Q(P) curve 1_7": 65535.0
+        },
+        {
+            "Q(P) curve 1_8": 65535.0
+        },
+        {
+            "Q(P) curve 1_9": 65535.0
+        },
+        {
+            "Q(P) curve 1_10": 65535.0
+        },
+        {
+            "Q(P) curve 1_11": 65535.0
+        },
+        {
+            "Q(P) curve 1_12": 65535.0
+        },
+        {
+            "Q(P) curve 1_13": 65535.0
+        },
+        {
+            "Q(P) curve 1_14": 65535.0
+        },
+        {
+            "Q(P) curve 1_15": 65535.0
+        },
+        {
+            "Q(P) curve 1_16": 65535.0
+        },
+        {
+            "Q(P) curve 1_17": 65535.0
+        },
+        {
+            "Q(P) curve 1_18": 65535.0
+        },
+        {
+            "Q(P) curve 1_19": 65535.0
+        },
+        {
+            "Q(P) curve 1_20": 65535.0
+        },
+        {
+            "Q(P) curve 1_21": 65535.0
+        },
+        {
+            "Q(P) curve 1_22": 65535.0
+        },
+        {
+            "Q(P) curve 1_23": 65535.0
+        },
+        {
+            "Q(P) curve 1_24": 65535.0
+        },
+        {
+            "Q(U) curve 1_1": 65535.0
+        },
+        {
+            "Q(U) curve 1_2": 32767.0
+        },
+        {
+            "Q(U) curve 1_3": 32767.0
+        },
+        {
+            "Q(U) curve 1_4": 65535.0
+        },
+        {
+            "Q(U) curve 1_5": 65535.0
+        },
+        {
+            "Q(U) curve 1_6": 65535.0
+        },
+        {
+            "Q(U) curve 1_7": 65535.0
+        },
+        {
+            "Q(U) curve 1_8": 65535.0
+        },
+        {
+            "Q(U) curve 1_9": 65535.0
+        },
+        {
+            "Q(U) curve 1_10": 65535.0
+        },
+        {
+            "Q(U) curve 1_11": 65535.0
+        },
+        {
+            "Q(U) curve 1_12": 65535.0
+        },
+        {
+            "Q(U) curve 1_13": 65535.0
+        },
+        {
+            "Q(U) curve 1_14": 65535.0
+        },
+        {
+            "Q(U) curve 1_15": 65535.0
+        },
+        {
+            "Q(U) curve 1_16": 65535.0
+        },
+        {
+            "Q(U) curve 1_17": 65535.0
+        },
+        {
+            "Q(U) curve 1_18": 65535.0
+        },
+        {
+            "Q(U) curve 1_19": 65535.0
+        },
+        {
+            "Q(U) curve 1_20": 65535.0
+        },
+        {
+            "Q(U) curve 1_21": 65535.0
+        },
+        {
+            "Q(U) curve 1_22": 65535.0
+        },
+        {
+            "Q(U) curve 1_23": 65535.0
+        },
+        {
+            "Q(U) curve 1_24": 65535.0
+        },
+        {
+            "Q(U) curve 1_25": 65535.0
+        },
+        {
+            "Q(U) curve 1_26": 65535.0
+        },
+        {
+            "Q(U) curve 1_27": 65535.0
+        },
+        {
+            "Q(U) curve 1_28": 65535.0
+        },
+        {
+            "Q(U) curve 1_29": 65535.0
+        },
+        {
+            "Q(U) curve 1_30": 65535.0
+        },
+        {
+            "Q(U) curve 1_31": 32767.0
+        },
+        {
+            "Q(U) curve 1_32": 32767.0
+        },
+        {
+            "Q(U) curve 1_33": 32767.0
+        },
+        {
+            "Q(U) curve 1_34": 65535.0
+        },
+        {
+            "Q(U) curve 1_35": 65535.0
+        },
+        {
+            "Q(U) curve 1_36": 65535.0
+        },
+        {
+            "Q(U) curve 1_37": 65535.0
+        },
+        {
+            "Q(U) curve 1_38": 65535.0
+        },
+        {
+            "Q(P) curve 2_1": 65535.0
+        },
+        {
+            "Q(P) curve 2_2": 65535.0
+        },
+        {
+            "Q(P) curve 2_3": 65535.0
+        },
+        {
+            "Q(P) curve 2_4": 65535.0
+        },
+        {
+            "Q(P) curve 2_5": 65535.0
+        },
+        {
+            "Q(P) curve 2_6": 65535.0
+        },
+        {
+            "Q(P) curve 2_7": 65535.0
+        },
+        {
+            "Q(P) curve 2_8": 65535.0
+        },
+        {
+            "Q(P) curve 2_9": 65535.0
+        },
+        {
+            "Q(P) curve 2_10": 65535.0
+        },
+        {
+            "Q(P) curve 2_11": 65535.0
+        },
+        {
+            "Q(P) curve 2_12": 65535.0
+        },
+        {
+            "Q(P) curve 2_13": 65535.0
+        },
+        {
+            "Q(P) curve 2_14": 65535.0
+        },
+        {
+            "Q(P) curve 2_15": 65535.0
+        },
+        {
+            "Q(P) curve 2_16": 65535.0
+        },
+        {
+            "Q(P) curve 2_17": 65535.0
+        },
+        {
+            "Q(P) curve 2_18": 65535.0
+        },
+        {
+            "Q(P) curve 2_19": 65535.0
+        },
+        {
+            "Q(U) curve 2_1": 65535.0
+        },
+        {
+            "Q(U) curve 2_2": 65535.0
+        },
+        {
+            "Q(U) curve 2_3": 65535.0
+        },
+        {
+            "Q(U) curve 2_4": 65535.0
+        },
+        {
+            "Q(U) curve 2_5": 65535.0
+        },
+        {
+            "Q(U) curve 2_6": 65535.0
+        },
+        {
+            "Q(U) curve 2_7": 65535.0
+        },
+        {
+            "Q(U) curve 2_8": 65535.0
+        },
+        {
+            "Q(U) curve 2_9": 65535.0
+        },
+        {
+            "Q(U) curve 2_10": 65535.0
+        },
+        {
+            "Q(U) curve 2_11": 65535.0
+        },
+        {
+            "Q(U) curve 2_12": 65535.0
+        },
+        {
+            "Q(U) curve 2_13": 65535.0
+        },
+        {
+            "Q(U) curve 2_14": 65535.0
+        },
+        {
+            "Q(U) curve 2_15": 65535.0
+        },
+        {
+            "Q(U) curve 2_16": 65535.0
+        },
+        {
+            "Q(U) curve 2_17": 65535.0
+        },
+        {
+            "Q(U) curve 2_18": 65535.0
+        },
+        {
+            "Q(U) curve 2_19": 65535.0
+        },
+        {
+            "Q(U) curve 2_20": 65535.0
+        },
+        {
+            "Quick grid dispatch mode": 65535.0
+        },
+        {
+            "Swift grid dispatch mode": 65535.0
+        }
+    ]
+]
