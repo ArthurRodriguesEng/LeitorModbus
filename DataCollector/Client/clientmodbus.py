@@ -34,7 +34,6 @@ class ClientMODBUS():
         
         #print(self.MB_Table)
         data_read = []
-        data_read_dict = {}
         for tag_count in range(len(self.MB_Table["address"])):
             #print(self.MB_Table["address"][tag_count],self.MB_Table["var_name"][tag_count])
             try:
@@ -89,7 +88,6 @@ class ClientMODBUS():
                     continue
             # print(decoder)
                 data_read.append({self.MB_Table["var_name"][tag_count]: decoder})
-                data_read_dict.update({self.MB_Table["var_name"][tag_count]: decoder})
             except Exception as e:
                     print('Erro scan: ', e.args)
                     continue
