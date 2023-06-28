@@ -9,79 +9,92 @@ import math
 import json
 
 import pandas as pd
-
+import os
 import coleta.backend as backend
 
+import ast
 
-class ClienteMODBUS():
+
+class ClientMODBUS():
     '''
         Construtor da Classe Cliente MODBUS
     '''
 
-    #def __init__(self, server_ip, porta, usina_name, ID, tcu_number_to_read, ncu_scan):
+    
     def __init__(self, server_ip, porta , ID , usina_name):
-        self._cliente = ModbusClient(host=server_ip, port=porta)
+        self._client = ModbusClient(host=server_ip, port=porta)
         self._usina_name = usina_name
         self._ID = ID
-
-
+        self.MB_Table = []
+        self.Log = []
+        self.tag = ''
+        self.log_to_send = []
+ 
+    def read_and_decode_data(self, EQP_number):
         
-    def read_and_decode_data(self,modbus_table, EQP_number):
+        #print(self.MB_Table)
         data_read = []
-        for tag_count in range(len(modbus_table["address"])):
-            print(modbus_table["address"][tag_count],modbus_table["var_name"][tag_count])
+        data_read_dict = {}
+        for tag_count in range(len(self.MB_Table["address"])):
+            #print(self.MB_Table["address"][tag_count],self.MB_Table["var_name"][tag_count])
             try:
                 decoder = "NaN"
-                if(int(modbus_table["n_bit"][tag_count]) == 64):
-                    if(modbus_table["type"][tag_count] == "S64"):
-                        decoder = self.read_data(int(modbus_table["func"][tag_count]),int(modbus_table["address"][tag_count] + modbus_table["up_addr"][tag_count]*(EQP_number)), int(4))
-                if(int(modbus_table["n_bit"][tag_count]) == 32):
-                    if(modbus_table["type"][tag_count] == "F32"):
-                        decoder = self.read_data(int(modbus_table["func"][tag_count]),int(modbus_table["address"][tag_count] + modbus_table["up_addr"][tag_count]*(EQP_number) +1), int(2))
+                if(int(self.MB_Table["n_bit"][tag_count]) == 64):
+                    if(self.MB_Table["type"][tag_count] == "S64"):
+                        decoder = self.read_data(int(self.MB_Table["func"][tag_count]),int(self.MB_Table["address"][tag_count] + self.MB_Table["up_addr"][tag_count]*(EQP_number)), int(4))
+                if(int(self.MB_Table["n_bit"][tag_count]) == 32):
+                    if(self.MB_Table["type"][tag_count] == "F32"):
+                        decoder = self.read_data(int(self.MB_Table["func"][tag_count]),int(self.MB_Table["address"][tag_count] + self.MB_Table["up_addr"][tag_count]*(EQP_number) +1), int(2))
                         #print(decoder)
                         decoder = self.decode_float32(decoder)
-                    elif(modbus_table["type"][tag_count] == "D32"):
-                        decoder = self.read_data(int(modbus_table["func"][tag_count]),int(modbus_table["address"][tag_count] + modbus_table["up_addr"][tag_count]*(EQP_number)), int(2))
+                    elif(self.MB_Table["type"][tag_count] == "D32"):
+                        decoder = self.read_data(int(self.MB_Table["func"][tag_count]),int(self.MB_Table["address"][tag_count] + self.MB_Table["up_addr"][tag_count]*(EQP_number)), int(2))
                         decoder = str(self.float_to_date(decoder))
-                    elif(modbus_table["type"][tag_count] == "U32"):
-                        decoder = self.read_data(int(modbus_table["func"][tag_count]),int(modbus_table["address"][tag_count] + modbus_table["up_addr"][tag_count]*(EQP_number)), int(2))
+                    elif(self.MB_Table["type"][tag_count] == "U32"):
+                        decoder = self.read_data(int(self.MB_Table["func"][tag_count]),int(self.MB_Table["address"][tag_count] + self.MB_Table["up_addr"][tag_count]*(EQP_number)), int(2))
                         decoder = str(self.decode_uint32(decoder))
                     else:
-                        decoder = self.read_data(int(modbus_table["func"][tag_count]),int(modbus_table["address"][tag_count] + modbus_table["up_addr"][tag_count]*(EQP_number) +1 ), int(2)) 
-                if(int(modbus_table["n_bit"][tag_count]) == 16):
-                    decoder = self.read_data(int(modbus_table["func"][tag_count]),int(modbus_table["address"][tag_count]+ modbus_table["up_addr"][tag_count]*(EQP_number)), int(1))
-                    if(int(modbus_table["alarm"][tag_count]) == 1):
+                        decoder = self.read_data(int(self.MB_Table["func"][tag_count]),int(self.MB_Table["address"][tag_count] + self.MB_Table["up_addr"][tag_count]*(EQP_number) +1 ), int(2)) 
+                if(int(self.MB_Table["n_bit"][tag_count]) == 16):
+                    decoder = self.read_data(int(self.MB_Table["func"][tag_count]),int(self.MB_Table["address"][tag_count]+ self.MB_Table["up_addr"][tag_count]*(EQP_number)), int(1))
+                    if(int(self.MB_Table["alarm"][tag_count]) == 1):
                         decoder = self.read_all_bits(self.decode_uint16(decoder))
                     else:
-                        if(modbus_table["type"][tag_count] == "S16"):
+                        if(self.MB_Table["type"][tag_count] == "S16"):
                             decoder= int(self.decode_int16(decoder))
-                        elif(modbus_table["type"][tag_count] == "U16"):
+                        elif(self.MB_Table["type"][tag_count] == "U16"):
                             decoder= int(self.decode_uint16(decoder))
                         else:
                             pass      
-                if(int(modbus_table["n_bit"][tag_count]) == 8):
-                    decoder = self.read_data(modbus_table["func"][tag_count],int(modbus_table["address"][tag_count]+ modbus_table["up_addr"][tag_count]*(EQP_number-1)), int(1))
-                    if(int(modbus_table["start_bit"][tag_count]) == 15):
+                if(int(self.MB_Table["n_bit"][tag_count]) == 8):
+                    decoder = self.read_data(self.MB_Table["func"][tag_count],int(self.MB_Table["address"][tag_count]+ self.MB_Table["up_addr"][tag_count]*(EQP_number-1)), int(1))
+                    if(int(self.MB_Table["start_bit"][tag_count]) == 15):
                         decoder = self.decode_16_to_2_8_int(decoder,1)
-                    elif(int(modbus_table["start_bit"][tag_count]) == 7):
+                    elif(int(self.MB_Table["start_bit"][tag_count]) == 7):
                         decoder = self.decode_16_to_2_8_int(decoder,2)
                     else:
                         pass
 
-                    # if(modbus_table["type"][tag_count] == "S8"):
+                    # if(self.MB_Table["type"][tag_count] == "S8"):
                     #     decoder = int(self.decode_int8(decoder))
                     # else:
                     #     decoder = int(self.decode_uint8(decoder))
 
-                if(int(modbus_table["n_bit"][tag_count]) < 8):
-                    decoder = self.read_bits(self.read_data(modbus_table["func"][tag_count],int(modbus_table["address"][tag_count]+ modbus_table["up_addr"][tag_count]*(EQP_number-1)), int(1)),int(modbus_table["start_bit"][tag_count]),(int(modbus_table["start_bit"][tag_count] -int(modbus_table["n_bit"][tag_count]))))
-                print(decoder)
-                data_read.append({modbus_table["var_name"][tag_count]: decoder})
+                if(int(self.MB_Table["n_bit"][tag_count]) < 8):
+                    decoder = self.read_bits(self.read_data(self.MB_Table["func"][tag_count],int(self.MB_Table["address"][tag_count]+ self.MB_Table["up_addr"][tag_count]*(EQP_number-1)), int(1)),int(self.MB_Table["start_bit"][tag_count]),(int(self.MB_Table["start_bit"][tag_count] -int(self.MB_Table["n_bit"][tag_count]))))
+                try:
+                    if(int(self.MB_Table["mult"][tag_count]) != int(1)):
+                        decoder = float(decoder)* float(self.MB_Table["mult"][tag_count])
+                except:
+                    continue
+            # print(decoder)
+                data_read.append({self.MB_Table["var_name"][tag_count]: decoder})
+                data_read_dict.update({self.MB_Table["var_name"][tag_count]: decoder})
             except Exception as e:
                     print('Erro scan: ', e.args)
                     continue
-                                  
-        return data_read
+
+        self.Log = data_read        
 
 
     def read_data(self, tipo, addr, n):
@@ -92,62 +105,77 @@ class ClienteMODBUS():
                     addr : endereço da tabela modbus +1
                     n_reg : número de registrador
         '''
-        
         if tipo == 1:
-            result = self._cliente.read_coils(addr,  n)
-            return result
+            result = self._client.read_coils(addr,  n)
         if tipo == 2:
-            result = self._cliente.read_discrete_inputs(addr,  n)
-            return result
+            result = self._client.read_discrete_inputs(addr,  n)
         if tipo == 5:
-            result = self._cliente.read_input_registers(addr,  n)
-            return result
+            result = self._client.read_input_registers(addr,  n)
         if tipo == 6:
-            result = self._cliente.read_holding_registers(addr,  n)
-            return result
-        
-    def build_csv(self,log, modbus_table, ID):
-        print(log)
-        df = pd.DataFrame(log)
-        df.to_csv(str(modbus_table["equipament"][0]) +  "_" + str(ID) +  "_" + ".csv")
+            result = self._client.read_holding_registers(addr,  n)
+        return result
     
-    def build_jsonfile(self, log, tag):
-        if(tag == 'WIND'):
-            data_log = self.windspeed_to_json(log,4)
-        elif(tag == 'NCU'):
-            data_log = self.data_to_json(log,4)
-        elif(tag == 'WS_PEAK'):
-            data_log = self.windspeedpeak_to_json(log,4)
-        else:
-            #json_obj = json.loads(log)
-            #data_log = json.dumps(log, 4)
-            pass
-
-        with open("json_data" + "_" + str(tag) + str(self._ID) + ".json", "w") as outfile: 
-            outfile.write(data_log)
-
-    def insert_to_db(self, log, COLLECTION):
-        if(COLLECTION == 'RB_WS'):
-            json_obj = json.loads(self.windspeed_to_json(log,4))
-            backend.send_windspeed(json_obj)
-        elif(COLLECTION == 'RB_NCU'):
-            json_obj = json.loads(self.data_to_json(log,4))
-            backend.send_ncu(json_obj)
-        # elif(COLLECTION == 'RB_WS_PEAK'):
-        #      json_obj = json.loads(self.windspeedpeak_to_json(log,4))
-        else:
-            # json_obj = json.loads(self.windspeedpeak_to_json(log,4))
-            # json.dumps(json_obj, 4)
-            print('Could not create json file')
-            
-        if(backend.send_ncu(json_obj) == True):
-            print('Send done')
-        else:
-            print('Send fail')
-
-        # mongo_obj = MongoDB.MongoDB()
-        # mongo_obj.insert(self._usina_name, str(COLLECTION) + str(self._ID), json_obj)
+    def load_data(self):
+        try:    
+            self.log_to_send = pd.read_csv(str(self.tag) +  "_" +  str(self._ID) + ".csv", header = None).values.tolist()
+            for i in range(len(self.log_to_send)): 
+                self.log_to_send[i] = [ast.literal_eval(str(self.log_to_send[i][0]))]   
+        except:
+            self.log_to_send = []
         
+    def build_csv(self,log):
+        df = pd.DataFrame(log)
+        df.to_csv(str(self.tag) + '_'+ str(self._ID) + ".csv", header= False, index= False)
+
+    def send(self):return False
+    
+    def data_to_json(self, data: list, indent: int = None) -> str:
+        data_log={}
+        for valor in data[0]: data_log.update(valor)
+        
+        data_2 ={'name': str(str(self.tag).lower() + str(self._ID)),
+                 'data': data_log
+                 }
+        data = {'usina': self._usina_name, str(self.tag).lower() : data_2}
+
+        return json.dumps(data, indent=indent)
+    
+    def build_jsonfile(self, log, n = ''):
+        data_log = self.data_to_json(log,4)
+        with open(str(self.tag) + '_'+ str(self._ID)+ str(n) +".json", "w") as outfile:
+            outfile.write(data_log)
+            
+    def insert_to_db(self, log):
+        json_obj = json.loads(self.data_to_json(log,4))
+        #print(json_obj)
+        #regress = self.send(json.loads(self.data_to_json(log,4)))
+        # if(regress):
+        #     print('Send done')
+        # else:
+        #     print('Send fail')
+        return False
+       
+    def destroy_csv(self):
+        file = str(str(self.tag) + '_'+ str(self._ID) + ".csv")
+        if(os.path.exists(file) and os.path.isfile(file)): 
+            os.remove(file)
+        
+    
+    def data_manager(self):
+        i=0
+        while i < len(self.log_to_send):
+            if(self.insert_to_db(self.log_to_send[i])):
+                self.log_to_send.pop(i)
+                print('sent')
+                #print(self.log_to_send)
+            else:
+                break
+            
+        if(self.log_to_send == []):
+            self.destroy_csv()
+        else:
+            self.build_csv(self.log_to_send)
+       
     def decode_float64(self,decoder):
         decoder = BinaryPayloadDecoder.fromRegisters(decoder, Endian.Big)
         decoder = decoder.decode_64bit_float()
@@ -249,69 +277,8 @@ class ClienteMODBUS():
         decoder_bit = decoder_bit[15-bit_start: 15-bit_finish]
         decoder_bit = str ('0b' + ''.join(decoder_bit))
         return int(decoder_bit,2)
-    
-    def data_to_json(self ,data: list, indent: int = None)-> str:
-        '''
-        Converte os dados de coleta para o formato JSON.
-
-                Parameters:
-                    a (list): lista com os dados lidos da coleta.
-                    indent (int): Tamanho da indentação usada nacodificação.
-
-                Returns:
-                    json (str): Json dos dados de coleta
-        '''
-        f = lambda v:reduce(lambda a, b: {**a, **b}, v)
-        
-        if(data[0][0] == 'NCU'+str(self._ID)):
-            tcus = [ {"name": v[0], "data": f(v[1])} for v in data[1:] ]
-            ncu = {"name": data[0][0], "config": f(data[0][1]), "tcus": tcus }
-            usina = { "usina": self._usina_name, "ncu": ncu}
-        else:
-             tcus = [ {"name": v[0], "data": f(v[1])} for v in data[0:] ]
-             ncu = {"name": 'NCU'+str(self._ID) , "tcus": tcus }
-             usina = { "usina": self._usina_name, "ncu":ncu }
-            
-        return json.dumps(usina, indent=indent)
-
-    def windspeed_to_json(self, wind: list, indent: int = None) -> str:
-        '''
-        Converte os dados de leitura da velocidade do vento para o formato JSON.
-
-                Parameters:
-                    wind (list): Lista com os dados lidos da coleta.
-                    indent (int): Tamanho da indentação usada na codificação.
-
-                Returns:
-                    json (str): JSON dos dados de velocidade do vento
-        '''
-        data = { 
-            'usina': self._usina_name,
-            'ncu': 'NCU'+str(self._ID),
-            'NcuDatetime': wind[1]['NcuDatetime'], 
-            'WindSpeed_mps_rsu1': wind[0]['WindSpeed_mps_rsu1'] 
-        }
-        return json.dumps(data, indent=indent)
 
 
-    def windspeedpeak_to_json(self, data: list, indent: int = None) -> str:
-        '''
-        Converte os dados de leitura da velocidade do vento para o formato JSON.
-
-                Parameters:
-                    wind (list): Lista com os dados lidos da coleta.
-                    indent (int): Tamanho da indentação usada na codificação.
-
-                Returns:
-                    json (str): JSON dos dados de velocidade do vento
-        '''
-        f = lambda v:reduce(lambda a, b: {**a, **b}, v)
-            
-        day = [ {"name": v[0], "data": f(v[1])} for v in data[0:] ]
-        ncu = {"name": 'NCU'+str(self._ID) , "DAY": day }
-        usina = { "usina": self._usina_name, "ncu":ncu }
-            
-        return json.dumps(usina, indent=indent)
         
 
 

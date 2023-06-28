@@ -38,3 +38,6 @@ def send_ncu(data: dict) -> bool:
     URL = HOST + '/ncu'
     response = requests.post(URL, json=data)
     return (response.status_code == 200)
+
+def sen_inverter(data: dict) -> bool:
+    return False

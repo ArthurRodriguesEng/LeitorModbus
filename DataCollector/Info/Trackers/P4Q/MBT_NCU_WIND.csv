@@ -1,8 +1,0 @@
-﻿equipment;address;start_bit;n_bit;type;var_name;alarm;up_addr;func;n_reg
-DAY;36000;15;16;U16;Second;0;8;6;1
-DAY;36001;15;16;U16;Minute;0;8;6;1
-DAY;36002;15;16;U16;Hour;0;8;6;1
-DAY;36003;15;16;U16;Day;0;8;6;1
-DAY;36004;15;16;U16;Month;0;8;6;1
-DAY;36005;15;16;U16;Year;0;8;6;1
-DAY;36007;15;16;U16;WindSpeed;0;8;6;1
