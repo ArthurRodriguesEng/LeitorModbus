@@ -1,0 +1,95 @@
+﻿equipment;address;start_bit;n_bit;type;var_name;mult;func;up_addr;alarm
+multik;30001;31;32;F32;Número de Série;1;4;0;0
+multik;30003;31;32;F32;Tensão Trifásica (V);1;4;0;0
+multik;30005;31;32;F32;Tensão Fase/Fase (A-B);1;4;0;0
+multik;30007;31;32;F32;Tensão Fase/Fase (B-C);1;4;0;0
+multik;30009;31;32;F32;Tensão Fase/Fase (C-A);1;4;0;0
+multik;30011;31;32;F32;Tensão Linha 1 (V);1;4;0;0
+multik;30013;31;32;F32;Tensão Linha 2 (V);1;4;0;0
+multik;30015;31;32;F32;Tensão Linha 3 (V);1;4;0;0
+multik;30017;31;32;F32;Corrente Trifásica (A);1;4;0;0
+multik;30019;31;32;F32;Corrente de Neutro;1;4;0;0
+multik;30021;31;32;F32;Corrente Linha 1 (A);1;4;0;0
+multik;30023;31;32;F32;Corrente Linha 2 (A);1;4;0;0
+multik;30025;31;32;F32;Corrente Linha 3 (A);1;4;0;0
+multik;30027;31;32;F32;Freqüência Linha 1;1;4;0;0
+multik;30029;31;32;F32;Freqüência Linha 2;1;4;0;0
+multik;30031;31;32;F32;Freqüência Linha 3;1;4;0;0
+multik;30035;31;32;F32;Potência Ativa Trifásica (W);1;4;0;0
+multik;30037;31;32;F32;Potência Ativa Linha 1 (W);1;4;0;0
+multik;30039;31;32;F32;Potência Ativa Linha 2 (W);1;4;0;0
+multik;30041;31;32;F32;Potência Ativa Linha 3 (W);1;4;0;0
+multik;30043;31;32;F32;Potência Reativa Trifásica (VAr);1;4;0;0
+multik;30045;31;32;F32;Potência Reativa Linha 1 (VAr);1;4;0;0
+multik;30047;31;32;F32;Potência Reativa Linha 2 (VAr);1;4;0;0
+multik;30049;31;32;F32;Potência Reativa Linha 3 (VAr);1;4;0;0
+multik;30051;31;32;F32;Potência Aparente Trifásica (VA);1;4;0;0
+multik;30053;31;32;F32;Potência Aparente Linha 1 (VA);1;4;0;0
+multik;30055;31;32;F32;Potência Aparente Linha 2 (VA);1;4;0;0
+multik;30057;31;32;F32;Potência Aparente Linha 3 (VA);1;4;0;0
+multik;30059;31;32;F32;Fator de Potência Trifásico;1;4;0;0
+multik;30061;31;32;F32;Fator de Potência Linha 1;1;4;0;0
+multik;30063;31;32;F32;Fator de Potência Linha 2;1;4;0;0
+multik;30065;31;32;F32;Fator de Potência Linha 3;1;4;0;0
+multik;31003;31;32;F32;Tensão Trifásica (V)_min;1;4;0;0
+multik;31005;31;32;F32;Tensão Fase/Fase (A-B)_min;1;4;0;0
+multik;31007;31;32;F32;Tensão Fase/Fase (B-C)_min;1;4;0;0
+multik;31009;31;32;F32;Tensão Fase/Fase (C-A)_min;1;4;0;0
+multik;31011;31;32;F32;Tensão Linha 1 (V)_min;1;4;0;0
+multik;31013;31;32;F32;Tensão Linha 2 (V)_min;1;4;0;0
+multik;31015;31;32;F32;Tensão Linha 3 (V)_min;1;4;0;0
+multik;31017;31;32;F32;Corrente Trifásica (A)_min;1;4;0;0
+multik;31019;31;32;F32;Corrente de Neutro_min;1;4;0;0
+multik;31021;31;32;F32;Corrente Linha 1 (A)_min;1;4;0;0
+multik;31023;31;32;F32;Corrente Linha 2 (A)_min;1;4;0;0
+multik;31025;31;32;F32;Corrente Linha 3 (A)_min;1;4;0;0
+multik;31027;31;32;F32;Freqüência Linha 1_min;1;4;0;0
+multik;31029;31;32;F32;Freqüência Linha 2_min;1;4;0;0
+multik;31031;31;32;F32;Freqüência Linha 3_min;1;4;0;0
+multik;31035;31;32;F32;Potência Ativa Trifásica (W)_min;1;4;0;0
+multik;31037;31;32;F32;Potência Ativa Linha 1 (W)_min;1;4;0;0
+multik;31039;31;32;F32;Potência Ativa Linha 2 (W)_min;1;4;0;0
+multik;31041;31;32;F32;Potência Ativa Linha 3 (W)_min;1;4;0;0
+multik;31043;31;32;F32;Potência Reativa Trifásica (VAr)_min;1;4;0;0
+multik;31045;31;32;F32;Potência Reativa Linha 1 (VAr)_min;1;4;0;0
+multik;31047;31;32;F32;Potência Reativa Linha 2 (VAr)_min;1;4;0;0
+multik;31049;31;32;F32;Potência Reativa Linha 3 (VAr)_min;1;4;0;0
+multik;31051;31;32;F32;Potência Aparente Trifásica (VA)_min;1;4;0;0
+multik;31053;31;32;F32;Potência Aparente Linha 1 (VA)_min;1;4;0;0
+multik;31055;31;32;F32;Potência Aparente Linha 2 (VA)_min;1;4;0;0
+multik;31057;31;32;F32;Potência Aparente Linha 3 (VA)_min;1;4;0;0
+multik;31059;31;32;F32;Fator de Potência Trifásico_min;1;4;0;0
+multik;31061;31;32;F32;Fator de Potência Linha 1_min;1;4;0;0
+multik;31063;31;32;F32;Fator de Potência Linha 2_min;1;4;0;0
+multik;31065;31;32;F32;Fator de Potência Linha 3_min;1;4;0;0
+multik;32003;31;32;F32;Tensão Trifásica (V)_max;1;4;0;0
+multik;32005;31;32;F32;Tensão Fase/Fase (A-B)_max;1;4;0;0
+multik;32007;31;32;F32;Tensão Fase/Fase (B-C)_max;1;4;0;0
+multik;32009;31;32;F32;Tensão Fase/Fase (C-A)_max;1;4;0;0
+multik;32011;31;32;F32;Tensão Linha 1 (V)_max;1;4;0;0
+multik;32013;31;32;F32;Tensão Linha 2 (V)_max;1;4;0;0
+multik;32015;31;32;F32;Tensão Linha 3 (V)_max;1;4;0;0
+multik;32017;31;32;F32;Corrente Trifásica (A)_max;1;4;0;0
+multik;32019;31;32;F32;Corrente de Neutro_max;1;4;0;0
+multik;32021;31;32;F32;Corrente Linha 1 (A)_max;1;4;0;0
+multik;32023;31;32;F32;Corrente Linha 2 (A)_max;1;4;0;0
+multik;32025;31;32;F32;Corrente Linha 3 (A)_max;1;4;0;0
+multik;32027;31;32;F32;Freqüência Linha 1_max;1;4;0;0
+multik;32029;31;32;F32;Freqüência Linha 2_max;1;4;0;0
+multik;32031;31;32;F32;Freqüência Linha 3_max;1;4;0;0
+multik;32035;31;32;F32;Potência Ativa Trifásica (W)_max;1;4;0;0
+multik;32037;31;32;F32;Potência Ativa Linha 1 (W)_max;1;4;0;0
+multik;32039;31;32;F32;Potência Ativa Linha 2 (W)_max;1;4;0;0
+multik;32041;31;32;F32;Potência Ativa Linha 3 (W)_max;1;4;0;0
+multik;32043;31;32;F32;Potência Reativa Trifásica (VAr)_max;1;4;0;0
+multik;32045;31;32;F32;Potência Reativa Linha 1 (VAr)_max;1;4;0;0
+multik;32047;31;32;F32;Potência Reativa Linha 2 (VAr)_max;1;4;0;0
+multik;32049;31;32;F32;Potência Reativa Linha 3 (VAr)_max;1;4;0;0
+multik;32051;31;32;F32;Potência Aparente Trifásica (VA)_max;1;4;0;0
+multik;32053;31;32;F32;Potência Aparente Linha 1 (VA)_max;1;4;0;0
+multik;32055;31;32;F32;Potência Aparente Linha 2 (VA)_max;1;4;0;0
+multik;32057;31;32;F32;Potência Aparente Linha 3 (VA)_max;1;4;0;0
+multik;32059;31;32;F32;Fator de Potência Trifásico_max;1;4;0;0
+multik;32061;31;32;F32;Fator de Potência Linha 1_max;1;4;0;0
+multik;32063;31;32;F32;Fator de Potência Linha 2_max;1;4;0;0
+multik;32065;31;32;F32;Fator de Potência Linha 3_max;1;4;0;0

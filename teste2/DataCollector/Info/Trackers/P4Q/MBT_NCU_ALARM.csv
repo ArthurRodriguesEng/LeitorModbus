@@ -1,0 +1,5 @@
+﻿equipment;address;start_bit;n_bit;type;var_name;func;up_addr;n_reg;alarm;mult
+NCU;30104;31;32;D32;NcuDatetime;3;0;2;0;1
+NCU;30100;15;16;U16;DigitalInputReg;3;0;1;1;1
+NCU;30101;15;16;U16;Alarm_NCU;3;0;1;1;1
+NCU;30102;15;16;U16;Alarm_UPS;3;0;1;1;1

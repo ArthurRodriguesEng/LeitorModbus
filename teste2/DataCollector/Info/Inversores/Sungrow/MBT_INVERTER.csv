@@ -1,0 +1,63 @@
+﻿equipment;address;start_bit;n_bit;type;var_name;mult;func;up_addr;alarm
+Inversor;4999;15;16;U16;Device type code;1;4;0;0
+Inversor;5000;15;16;U16;Nominal active power_kW;0.1;4;0;0
+Inversor;5001;15;16;U16;Output type;1;4;0;0
+Inversor;5002;15;16;U16;Daily power yields_kWh;0.1;4;0;0
+Inversor;5003;31;32;U32;Total power yields_kWh;1;4;0;0
+Inversor;5005;31;32;U32;Total running time_h;1;4;0;0
+Inversor;5007;15;16;S16;Internal temperature_C;0.1;4;0;0
+Inversor;5008;31;32;U32;Total apparent power_VA;1;4;0;0
+Inversor;5010;15;16;U16;MPPT 1 voltage_V;0.1;4;0;0
+Inversor;5011;15;16;U16;MPPT 1 current_A;0.1;4;0;0
+Inversor;5016;31;32;U32;Total DC power_W;1;4;0;0
+Inversor;5018;15;16;U16;A-B line voltage/phase A voltage _V;0.1;4;0;0
+Inversor;5019;15;16;U16;B-C line Voltage/phase B Voltage_ V;0.1;4;0;0
+Inversor;5020;15;16;U16;C-A line Voltage/phase C Voltage_V;0.1;4;0;0
+Inversor;5021;15;16;U16;Phase A current_A;0.1;4;0;0
+Inversor;5022;15;16;U16;Phase B current_A;0.1;4;0;0
+Inversor;5023;15;16;U16;Phase C current_A;0.1;4;0;0
+Inversor;5030;31;32;U32;Total active power_W;1;4;0;0
+Inversor;5032;31;32;S32;Total reactive power_Var;1;4;0;0
+Inversor;5034;15;16;S16;Power factor;0.001;4;0;0
+Inversor;5035;15;16;U16;Grid frequency_Hz;0.1;4;0;0
+Inversor;5037;15;16;U16;Work state;1;4;0;0
+Inversor;5038;15;16;U16;Fault/Alarm time: Year;1;4;0;0
+Inversor;5039;15;16;U16;Fault/Alarm time: Month;1;4;0;0
+Inversor;5040;15;16;U16;Fault/Alarm time: Day;1;4;0;0
+Inversor;5041;15;16;U16;Fault/Alarm time: Hour;1;4;0;0
+Inversor;5042;15;16;U16;Fault/Alarm time: Minute;1;4;0;0
+Inversor;5043;15;16;U16;Fault/Alarm time: Second;1;4;0;0
+Inversor;5044;15;16;U16;Fault/Alarm code 1;1;4;0;0
+Inversor;5048;15;16;U16;Nominal reactive power_Var;0.1;4;0;0
+Inversor;5070;15;16;U16;Array insulation resistance_kohm;1;4;0;0
+Inversor;5076;31;32;U32;Active PowerRegulation Setpoint_W;1;4;0;0
+Inversor;5078;31;32;S32;Reactive Power Regulation Setpoint_Var;1;4;0;0
+Inversor;5080;31;32;U32;Work state;1;4;0;0
+Inversor;5112;15;16;U16;Daily running time;1;4;0;0
+Inversor;5113;15;16;U16;Present country;1;4;0;0
+Inversor;5127;31;32;U32;Monthly power yields_kWh;0.1;4;0;0
+Inversor;5139;15;16;U16;Work status1;1;4;0;0
+Inversor;5140;15;16;U16;Work status2;1;4;0;0
+Inversor;5143;31;32;U32;Total power yields_kWh;0.1;4;0;0
+Inversor;5145;15;16;S16;Negative voltage to the ground_V;0.1;4;0;0
+Inversor;5146;15;16;U16;Bus voltage_V;0.1;4;0;0
+Inversor;5147;15;16;U16;Grid frequency2_Hz;0.01;4;0;0
+Inversor;5149;15;16;U16;PID work state;1;4;0;0
+Inversor;5150;15;16;U16;PID alarm code;1;4;0;0
+Inversor;4999;15;16;U16;System clock: Year;1;3;0;0
+Inversor;5000;15;16;U16;System clock: Month;1;3;0;0
+Inversor;5001;15;16;U16;System clock: Day;1;3;0;0
+Inversor;5002;15;16;U16;System clock: Hour;1;3;0;0
+Inversor;5003;15;16;U16;System clock: Minute;1;3;0;0
+Inversor;5004;15;16;U16;System clock: Second;1;3;0;0
+Inversor;5005;15;16;U16;Start/Stop;1;3;0;0
+Inversor;5006;15;16;U16;Power limitation switch;1;3;0;0
+Inversor;5007;15;16;U16;Power limitation setting_%;0.1;3;0;0
+Inversor;5018;15;16;S16;Power factor setting;0.001;3;0;0
+Inversor;5035;15;16;U16;Reactive power adjustment mode;1;3;0;0
+Inversor;5036;15;16;S16;Reactive power percentage setting_%;0.001;3;0;0
+Inversor;5038;15;16;U16;Power limitation adjustment_kW;0.1;3;0;0
+Inversor;5039;15;16;S16;Reactive power adjustment _kVar;0.1;3;0;0
+Inversor;5040;15;16;U16;PID Recovery;1;3;0;0
+Inversor;5041;15;16;U16;Anti-PID;1;3;0;0
+Inversor;5042;15;16;U16;Full-Day PID;1;3;0;0

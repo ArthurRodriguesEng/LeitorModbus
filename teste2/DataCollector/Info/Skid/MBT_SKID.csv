@@ -1,0 +1,51 @@
+﻿equipment;address;start_bit;n_bit;type;var_name;mult;func;up_addr;alarm
+SKID;30001;31;32;U32;Número de Série;1;4;0;0
+SKID;30003;31;32;F32;Tensão Trifásica (V);1;4;0;0
+SKID;30005;31;32;F32;Corrente Trifásica (A);1;4;0;0
+SKID;30007;31;32;F32;Fator de Potência Trifásico;1;4;0;0
+SKID;30009;31;32;F32;Potência Aparente Trifásica (VA);1;4;0;0
+SKID;30011;31;32;F32;Potência Reativa Trifásica (VAr);1;4;0;0
+SKID;30013;31;32;F32;Potência Ativa Trifásica (W);1;4;0;0
+SKID;30015;31;32;F32;Frequência (Hz);1;4;0;0
+SKID;30017;31;32;F32;Tensão Linha-Neutro 1 (V)****;1;4;0;0
+SKID;30019;31;32;F32;Tensão Linha-Neutro 2 (V)****;1;4;0;0
+SKID;30021;31;32;F32;Tensão Linha-Neutro 3 (V)****;1;4;0;0
+SKID;30023;31;32;F32;Corrente Linha 1 (A);1;4;0;0
+SKID;30025;31;32;F32;Corrente Linha 2 (A);1;4;0;0
+SKID;30027;31;32;F32;Corrente Linha 3 (A);1;4;0;0
+SKID;30029;31;32;F32;Potência Ativa Linha 1 (W);1;4;0;0
+SKID;30031;31;32;F32;Potência Ativa Linha 2 (W);1;4;0;0
+SKID;30033;31;32;F32;Potência Ativa Linha 3 (W);1;4;0;0
+SKID;30035;31;32;F32;Potência Reativa Linha 1 (VAr);1;4;0;0
+SKID;30037;31;32;F32;Potência Reativa Linha 2 (VAr);1;4;0;0
+SKID;30039;31;32;F32;Potência Reativa Linha 3 (VAr);1;4;0;0
+SKID;30041;31;32;F32;Potência Aparente Linha 1 (VA);1;4;0;0
+SKID;30043;31;32;F32;Potência Aparente Linha 2 (VA);1;4;0;0
+SKID;30045;31;32;F32;Potência Aparente Linha 3 (VA);1;4;0;0
+SKID;30047;31;32;F32;Fator de Potência Linha 1;1;4;0;0
+SKID;30049;31;32;F32;Fator de Potência Linha 2;1;4;0;0
+SKID;30051;31;32;F32;Fator de Potência Linha 3;1;4;0;0
+SKID;30053;31;32;F32;Energia Ativa Positiva (kWh);1;4;0;0
+SKID;30055;31;32;F32;Energia Reativa Positiva (kVArh);1;4;0;0
+SKID;30057;31;32;F32;Energia Ativa Negativa (kWh);1;4;0;0
+SKID;30059;31;32;F32;Energia Reativa Negativa (kVArh);1;4;0;0
+SKID;30061;31;32;F32;Max. Demanda Ativa (kW);1;4;0;0
+SKID;30063;31;32;F32;Demanda Ativa (kW);1;4;0;0
+SKID;30065;31;32;F32;Max. Demanda Aparente (kVA);1;4;0;0
+SKID;30067;31;32;F32;Demanda Aparente (kVA);1;4;0;0
+SKID;30085;31;32;F32;Tensão Linha-Linha 12 (V);1;4;0;0
+SKID;30087;31;32;F32;Tensão Linha-Linha 23 (V);1;4;0;0
+SKID;30089;31;32;F32;Tensão Linha-Linha 31 (V);1;4;0;0
+SKID;30091;31;32;F32;Max. Tensão Trifásica (V);1;4;0;0
+SKID;30093;31;32;F32;Max. Corrente Trifásica (A);1;4;0;0
+SKID;30095;31;32;F32;Contador EDP-1 ***;1;4;0;0
+SKID;30097;31;32;F32;Contador EDP-2***;1;4;0;0
+SKID;30099;31;32;F32;Contador Parcial de Energia**(kWh);1;4;0;0
+SKID;301013;31;32;F32;Corrente de Neutro*(A);1;4;0;0
+SKID;30201;15;16;U16;THD – Tensão Linha 1;1;4;0;0
+SKID;30202;15;16;U16;THD – Tensão Linha 2;1;4;0;0
+SKID;30203;15;16;U16;THD – Tensão Linha 3;1;4;0;0
+SKID;30204;15;16;U16;THD – Corrente Linha 1;1;4;0;0
+SKID;30205;15;16;U16;THD – Corrente Linha 2;1;4;0;0
+SKID;30206;15;16;U16;THD – Corrente Linha 3;1;4;0;0
+SKID;30221;7;8;U8;Código de Erro;1;4;0;0
